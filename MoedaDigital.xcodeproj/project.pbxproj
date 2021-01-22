@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		5FECC55525B9C5BE00F07700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */; };
 		5FECC56025B9C5BE00F07700 /* MoedaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC55F25B9C5BE00F07700 /* MoedaDigitalTests.swift */; };
 		5FECC56B25B9C5BE00F07700 /* MoedaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC56A25B9C5BE00F07700 /* MoedaDigitalUITests.swift */; };
+		81C656DA5EB010C8C07E0525 /* Pods_MoedaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */; };
+		E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */; };
+		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
+		F11D165225BA0C7B0046C5A9 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11D165125BA0C7B0046C5A9 /* Home.xib */; };
+		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
+		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
+		F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		578593508C2FC96B6A6D2984 /* Pods-MoedaDigital-MoedaDigitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital-MoedaDigitalUITests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FECC54225B9C5BA00F07700 /* MoedaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoedaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FECC54525B9C5BA00F07700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FECC54925B9C5BA00F07700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +58,17 @@
 		5FECC56625B9C5BE00F07700 /* MoedaDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoedaDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FECC56A25B9C5BE00F07700 /* MoedaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaDigitalUITests.swift; sourceTree = "<group>"; };
 		5FECC56C25B9C5BE00F07700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4DF9DD49C7F057338C895D /* Pods-MoedaDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA5FFD920C19CE2556F9A68 /* Pods-MoedaDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA41529266FFD4D7322958B /* Pods-MoedaDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital.release.xcconfig"; sourceTree = "<group>"; };
+		B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital_MoedaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
+		F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaAPI.swift; sourceTree = "<group>"; };
+		F11D165125BA0C7B0046C5A9 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
+		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
+		F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C656DA5EB010C8C07E0525 /* Pods_MoedaDigital.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +92,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		268E64FACCFE434519C8749C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */,
+				B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */,
+				AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E698DF8E6ED5F80FF955632 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B4DF9DD49C7F057338C895D /* Pods-MoedaDigital.debug.xcconfig */,
+				AEA41529266FFD4D7322958B /* Pods-MoedaDigital.release.xcconfig */,
+				F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */,
+				578593508C2FC96B6A6D2984 /* Pods-MoedaDigital-MoedaDigitalUITests.release.xcconfig */,
+				8BA5FFD920C19CE2556F9A68 /* Pods-MoedaDigitalTests.debug.xcconfig */,
+				EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5FECC53925B9C5BA00F07700 = {
 			isa = PBXGroup;
 			children = (
+				F11D167025BA0E710046C5A9 /* ViewModel */,
+				F11D165625BA0CCB0046C5A9 /* Model */,
+				F11D164F25BA0C4C0046C5A9 /* View */,
+				F11D164E25BA0C280046C5A9 /* Application */,
+				F11D164525BA0C090046C5A9 /* Service */,
 				5FECC54425B9C5BA00F07700 /* MoedaDigital */,
 				5FECC55E25B9C5BE00F07700 /* MoedaDigitalTests */,
 				5FECC56925B9C5BE00F07700 /* MoedaDigitalUITests */,
 				5FECC54325B9C5BA00F07700 /* Products */,
+				5E698DF8E6ED5F80FF955632 /* Pods */,
+				268E64FACCFE434519C8749C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +152,11 @@
 		5FECC54425B9C5BA00F07700 /* MoedaDigital */ = {
 			isa = PBXGroup;
 			children = (
-				5FECC54525B9C5BA00F07700 /* AppDelegate.swift */,
-				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
 				5FECC54B25B9C5BA00F07700 /* Main.storyboard */,
 				5FECC55125B9C5BE00F07700 /* Assets.xcassets */,
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
-				5FECC55625B9C5BE00F07700 /* Info.plist */,
 				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
+				F11D165125BA0C7B0046C5A9 /* Home.xib */,
 			);
 			path = MoedaDigital;
 			sourceTree = "<group>";
@@ -128,6 +179,47 @@
 			path = MoedaDigitalUITests;
 			sourceTree = "<group>";
 		};
+		F11D164525BA0C090046C5A9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F11D164E25BA0C280046C5A9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5FECC55625B9C5BE00F07700 /* Info.plist */,
+				5FECC54525B9C5BA00F07700 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F11D164F25BA0C4C0046C5A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F11D165625BA0CCB0046C5A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F11D167025BA0E710046C5A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FECC56F25B9C5BE00F07700 /* Build configuration list for PBXNativeTarget "MoedaDigital" */;
 			buildPhases = (
+				B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */,
 				5FECC53E25B9C5BA00F07700 /* Sources */,
 				5FECC53F25B9C5BA00F07700 /* Frameworks */,
 				5FECC54025B9C5BA00F07700 /* Resources */,
+				3A31E10F7A97DEF1B7EB7501 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FECC57225B9C5BE00F07700 /* Build configuration list for PBXNativeTarget "MoedaDigitalTests" */;
 			buildPhases = (
+				5954DD0BAC44231E95F2EB32 /* [CP] Check Pods Manifest.lock */,
 				5FECC55725B9C5BE00F07700 /* Sources */,
 				5FECC55825B9C5BE00F07700 /* Frameworks */,
 				5FECC55925B9C5BE00F07700 /* Resources */,
@@ -170,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FECC57525B9C5BE00F07700 /* Build configuration list for PBXNativeTarget "MoedaDigitalUITests" */;
 			buildPhases = (
+				48F1DF2A1A6E82E3193E80F7 /* [CP] Check Pods Manifest.lock */,
 				5FECC56225B9C5BE00F07700 /* Sources */,
 				5FECC56325B9C5BE00F07700 /* Frameworks */,
 				5FECC56425B9C5BE00F07700 /* Resources */,
+				327C4106BEE0076D270B0E88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11D165225BA0C7B0046C5A9 /* Home.xib in Resources */,
 				5FECC55525B9C5BE00F07700 /* LaunchScreen.storyboard in Resources */,
 				5FECC55225B9C5BE00F07700 /* Assets.xcassets in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
@@ -253,14 +351,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		327C4106BEE0076D270B0E88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A31E10F7A97DEF1B7EB7501 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48F1DF2A1A6E82E3193E80F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoedaDigital-MoedaDigitalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5954DD0BAC44231E95F2EB32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoedaDigitalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoedaDigital-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FECC53E25B9C5BA00F07700 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5FECC54A25B9C5BA00F07700 /* ViewController.swift in Sources */,
+				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
+				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,
+				F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +637,13 @@
 		};
 		5FECC57025B9C5BE00F07700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B4DF9DD49C7F057338C895D /* Pods-MoedaDigital.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N4AFW77XS;
-				INFOPLIST_FILE = MoedaDigital/Info.plist;
+				INFOPLIST_FILE = Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,12 +658,13 @@
 		};
 		5FECC57125B9C5BE00F07700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA41529266FFD4D7322958B /* Pods-MoedaDigital.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N4AFW77XS;
-				INFOPLIST_FILE = MoedaDigital/Info.plist;
+				INFOPLIST_FILE = Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,6 +679,7 @@
 		};
 		5FECC57325B9C5BE00F07700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA5FFD920C19CE2556F9A68 /* Pods-MoedaDigitalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +702,7 @@
 		};
 		5FECC57425B9C5BE00F07700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +725,7 @@
 		};
 		5FECC57625B9C5BE00F07700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +746,7 @@
 		};
 		5FECC57725B9C5BE00F07700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578593508C2FC96B6A6D2984 /* Pods-MoedaDigital-MoedaDigitalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
