@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var botaoAtualiza: UIButton!
     @IBOutlet weak var labelDataTelaPrincipal: UILabel!
     @IBOutlet weak var pesquisaMoeda: UISearchBar!
-    
+
     
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         atualizaTabela()
         atualizaData()
         load()
-
     }
     
     
