@@ -12,10 +12,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tabelaMoedas: UITableView!
     @IBOutlet weak var botaoAtualiza: UIButton!
-    
+    @IBOutlet weak var labelDataTelaPrincipal: UILabel!
+    @IBOutlet weak var pesquisaMoeda: UISearchBar!
+
     
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
+    
     
     //MARK: _- Life Cycle
 
@@ -24,13 +27,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
-        tabelaMoedas.reloadData()
+        atualizaTabela()
+        atualizaData()
+        load()
     }
     
     
     //MARK: - Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     
         return viewModel.moedaData.count
     }
 
@@ -45,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
-
+        
         return celula
     }
     
@@ -57,4 +63,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tabelaMoedas.reloadData()
     }
     
+    func atualizaTabela(){
+        tabelaMoedas.reloadData()
+    }
+    
+    func atualizaData(){
+        let data = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"        
+        self.labelDataTelaPrincipal.text = dateFormatter.string(from: data)
+    }
+    
+    func load(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.tabelaMoedas.reloadData()
+        }
+    }
+
 }
