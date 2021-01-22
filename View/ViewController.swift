@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.moedaData.count
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoedaViewCell
@@ -51,4 +52,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func atualizar(_ sender: Any) {
         tabelaMoedas.reloadData()
     }
+
 }
