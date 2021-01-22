@@ -22,6 +22,7 @@
 		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
 		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
 		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
+		F1855C5825BB038D0029CBFA /* MoedaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */; };
 		F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
 		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
 		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
+		F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewCell.swift; sourceTree = "<group>"; };
 		F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,9 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				F11D167025BA0E710046C5A9 /* ViewModel */,
-				F11D165625BA0CCB0046C5A9 /* Model */,
 				F11D164F25BA0C4C0046C5A9 /* View */,
 				F11D164E25BA0C280046C5A9 /* Application */,
+				F11D165625BA0CCB0046C5A9 /* Model */,
 				F11D164525BA0C090046C5A9 /* Service */,
 				5FECC54425B9C5BA00F07700 /* MoedaDigital */,
 				5FECC55E25B9C5BE00F07700 /* MoedaDigitalTests */,
@@ -201,6 +203,7 @@
 		F11D164F25BA0C4C0046C5A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
 			);
 			path = View;
@@ -469,6 +472,7 @@
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,
 				F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */,
+				F1855C5825BB038D0029CBFA /* MoedaViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
