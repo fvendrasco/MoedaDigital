@@ -33,10 +33,7 @@ class MoedaViewModel: RespostaAPI  {
         api.recebeMoeda()
     }
 
-    func loadMoeda() -> [Rate]{
-        guard  let TabelaDeValores = listaDeValores?.rates else {return[]}
-        print(moedaData.count)
-        return TabelaDeValores
+    func loadMoeda(){
     }
 }
     
