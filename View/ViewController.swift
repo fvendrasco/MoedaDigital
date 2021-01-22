@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tabelaMoedas: UITableView!
     @IBOutlet weak var botaoAtualiza: UIButton!
+    @IBOutlet weak var labelDataTelaPrincipal: UILabel!
+    
     
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
@@ -24,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
         tabelaMoedas.reloadData()
-
+        atualizaData()
     }
     
     
@@ -55,6 +57,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBAction func atualizar(_ sender: Any) {
         tabelaMoedas.reloadData()
+    }
+    
+    func atualizaData(){
+        let data = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"        
+        self.labelDataTelaPrincipal.text = dateFormatter.string(from: data)
     }
 
 }
