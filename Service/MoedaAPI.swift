@@ -19,13 +19,13 @@ import Alamofire
 
 class MoedaAPI: NSObject, MoedasProtocolo{
     
-    var delegate: RespostaAPI?
+    private var delegate: RespostaAPI?
 
+    //MARK: - Methods
     func configura(delegate: RespostaAPI) {
        self.delegate = delegate
     }
     
-    //MARK: - Methods
     func recebeMoeda(){
         guard let url = URL(string: "https://rest.coinapi.io/v1/exchangerate/BTC?apikey=50A700C0-CC3E-4D1D-B1A6-7E3BF21E8E0F") else {return}
         Alamofire.request(url, method: .get).responseJSON { (response) in
