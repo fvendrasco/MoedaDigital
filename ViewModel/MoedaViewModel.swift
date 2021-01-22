@@ -1,21 +1,17 @@
-//
-//  MainViewModel.swift
-//  EverisFilmes
-//
-//  Created by Breno Luizetto Cintra on 13/01/21.
-//  Copyright © 2021 Alura. All rights reserved.
-//
 
 import Foundation
 
-//protocol MainViewModelDelegate {
-//    func reloadData(movie: MovieViewData)
-//}
+protocol MoedaViewDelegate {
+    func reloadData(moeda: MoedaViewData)
+}
 
-class MoedaMainViewModel: RespostaAPI  {
-    func success(modelo Modelo: ModeloMoeda) {
-        listaDeValores = Modelo
+class MoedaViewModel: RespostaAPI  {
+    func success(modelo: ModeloMoeda) {
+        listaDeValores = modelo
         
+        for moedas in modelo.rates{
+            moedaData.append(MoedaViewData(model: moedas))
+        }
     }
     
     func failure() {
@@ -26,6 +22,9 @@ class MoedaMainViewModel: RespostaAPI  {
     
     private var listaDeValores: ModeloMoeda?
     private var api =  MoedaAPI()
+    var moedaData: [MoedaViewData] = []
+    var delegate: MoedaViewDelegate?
+    
 
     //MARK: - Métodos
     
@@ -34,8 +33,9 @@ class MoedaMainViewModel: RespostaAPI  {
         api.recebeMoeda()
     }
 
-    func loadMovie() -> [Rate]{
+    func loadMoeda() -> [Rate]{
         guard  let TabelaDeValores = listaDeValores?.rates else {return[]}
+        print(moedaData.count)
         return TabelaDeValores
     }
 }

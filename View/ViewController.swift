@@ -9,15 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: -Properts
+    
+    var viewModel: MoedaViewModel = MoedaViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        //BRENO
-        
-        //Felipe
-        
-        // Fernanda
+
     }
 
 
