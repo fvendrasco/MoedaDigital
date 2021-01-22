@@ -12,7 +12,7 @@ class MoedaViewModel: RespostaAPI  {
         for moedas in modelo.rates{
             moedaData.append(MoedaViewData(model: moedas))
         }
-        
+
     }
     
     func failure() {
@@ -33,8 +33,10 @@ class MoedaViewModel: RespostaAPI  {
         api.configura(delegate: self)
         api.recebeMoeda()
     }
+
+}
+    
     
  
-}
     
 
