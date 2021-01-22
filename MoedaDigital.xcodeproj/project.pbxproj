@@ -21,6 +21,7 @@
 		F11D165225BA0C7B0046C5A9 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11D165125BA0C7B0046C5A9 /* Home.xib */; };
 		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
 		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
+		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
 		F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		F11D165125BA0C7B0046C5A9 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
 		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
+		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
 		F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */,
+				F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FECC54A25B9C5BA00F07700 /* ViewController.swift in Sources */,
+				F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */,
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
 				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
