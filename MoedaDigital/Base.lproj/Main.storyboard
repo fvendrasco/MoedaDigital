@@ -167,6 +167,7 @@
                     <navigationItem key="navigationItem" title="Moeda Digital" id="Pv3-GJ-MES"/>
                     <connections>
                         <outlet property="botaoAtualiza" destination="bWZ-Ty-7qF" id="GO1-bm-rEy"/>
+                        <outlet property="labelDataTelaPrincipal" destination="KKo-Oc-DFc" id="EWv-rn-b52"/>
                         <outlet property="tabelaMoedas" destination="iad-8S-O7M" id="2nd-vt-0Qs"/>
                     </connections>
                 </viewController>
