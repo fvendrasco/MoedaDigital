@@ -11,18 +11,22 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tabelaMoedas: UITableView!
-    //MARK: - Properts
-    
-    var viewModel: MoedaViewModel = MoedaViewModel()
     @IBOutlet weak var botaoAtualiza: UIButton!
     
+    //MARK: - Properts
+    var viewModel: MoedaViewModel = MoedaViewModel()
+    
+    //MARK: _- Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
         tabelaMoedas.reloadData()
+
     }
+    
     
     //MARK: - Methods
     
@@ -37,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let lista = viewModel.moedaData[indexPath.row]
     
         let rate = lista.rate
-        celula.labelRate.text = String(format: "%.0f%", rate)
+        celula.labelRate.text = String(format: "$ %.0f%", rate)
         
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
@@ -46,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 150
+       return 120
    }
 
     @IBAction func atualizar(_ sender: Any) {

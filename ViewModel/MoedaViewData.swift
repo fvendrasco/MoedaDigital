@@ -9,7 +9,7 @@ import Foundation
 class MoedaViewData {
     
     //MARK: - Properts
-    var model: Rate
+    private let model: Rate
     
     //MARK: - Constructor
     init(model: Rate){
