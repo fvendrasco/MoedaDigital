@@ -15,7 +15,12 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let tableViewMoeda = moreNavigationController.viewControllers.first?.view as? UITableView
+   
     }
+    
+    func setupBar(){
+        let moedaController = UINavigationController(rootViewController: ViewController())
+        
+    }
+    
 }
