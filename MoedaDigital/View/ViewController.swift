@@ -85,4 +85,13 @@ extension ViewController: UITableViewDataSource {
        return 120
    }
     
+//     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let moedas = viewModel.moedaData[indexPath.row]
+//        let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "DetalhesViewController") as! DetalhesMoedaViewController
+//        controller.lista = moedas
+//        self.navigationController?.pushViewController(controller, animated: true)
+//    }
+
+    
 }

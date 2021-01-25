@@ -27,6 +27,7 @@
 		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
 		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
 		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
+		F17337EB25BF2ADD00D007BD /* DetalhesMoedaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17337EA25BF2ADD00D007BD /* DetalhesMoedaService.swift */; };
 		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
 		F1855C5825BB038D0029CBFA /* MoedaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */; };
 		F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */; };
@@ -85,6 +86,7 @@
 		F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaAPI.swift; sourceTree = "<group>"; };
 		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
 		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
+		F17337EA25BF2ADD00D007BD /* DetalhesMoedaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedaService.swift; sourceTree = "<group>"; };
 		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
 		F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewCell.swift; sourceTree = "<group>"; };
 		F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedaViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */,
+				F17337EA25BF2ADD00D007BD /* DetalhesMoedaService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
 				5F15BF3625BB6202005BAAF7 /* TabBarController.swift in Sources */,
 				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
+				F17337EB25BF2ADD00D007BD /* DetalhesMoedaService.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,
 				5F15BF3C25BB6235005BAAF7 /* HomeViewController.swift in Sources */,
