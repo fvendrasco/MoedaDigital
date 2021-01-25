@@ -13,8 +13,8 @@
 		5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */; };
 		5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */; };
 		5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */; };
-		5F15BF5625BEF45D005BAAF7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF5425BEF45D005BAAF7 /* TabBarViewController.swift */; };
-		5F15BF5725BEF45D005BAAF7 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF5525BEF45D005BAAF7 /* TabBarViewController.xib */; };
+		5FADF22F25BF2969003DB6AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */; };
+		5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */; };
 		5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC54525B9C5BA00F07700 /* AppDelegate.swift */; };
 		5FECC54A25B9C5BA00F07700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC54925B9C5BA00F07700 /* ViewController.swift */; };
 		5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FECC54B25B9C5BA00F07700 /* Main.storyboard */; };
@@ -62,8 +62,8 @@
 		5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoViewController.swift; sourceTree = "<group>"; };
 		5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritoViewController.xib; sourceTree = "<group>"; };
-		5F15BF5425BEF45D005BAAF7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		5F15BF5525BEF45D005BAAF7 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		5FECC54225B9C5BA00F07700 /* MoedaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoedaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FECC54525B9C5BA00F07700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FECC54925B9C5BA00F07700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,10 +212,10 @@
 			children = (
 				5FECC55625B9C5BE00F07700 /* Info.plist */,
 				5FECC54525B9C5BA00F07700 /* AppDelegate.swift */,
+				5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */,
 				5FECC54B25B9C5BA00F07700 /* Main.storyboard */,
 				5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */,
 				5F15BF2F25BB4E58005BAAF7 /* HomeTableViewCell.xib */,
-				5F15BF5525BEF45D005BAAF7 /* TabBarViewController.xib */,
 				5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */,
 				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
@@ -233,7 +233,7 @@
 				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
 				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
-				5F15BF5425BEF45D005BAAF7 /* TabBarViewController.swift */,
+				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F15BF5725BEF45D005BAAF7 /* TabBarViewController.xib in Resources */,
+				5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */,
 				5FECC55525B9C5BE00F07700 /* LaunchScreen.storyboard in Resources */,
 				5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */,
 				5FECC55225B9C5BE00F07700 /* Assets.xcassets in Resources */,
@@ -513,13 +513,13 @@
 				F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */,
 				F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */,
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
-				5F15BF5625BEF45D005BAAF7 /* TabBarViewController.swift in Sources */,
 				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,
 				5F15BF3C25BB6235005BAAF7 /* HomeViewController.swift in Sources */,
 				5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */,
 				5F15BF3025BB4E58005BAAF7 /* HomeTableViewCell.swift in Sources */,
+				5FADF22F25BF2969003DB6AE /* TabBarViewController.swift in Sources */,
 				F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */,
 				F1855C5825BB038D0029CBFA /* MoedaViewCell.swift in Sources */,
 			);

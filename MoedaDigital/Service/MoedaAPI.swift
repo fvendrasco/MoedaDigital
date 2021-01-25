@@ -47,6 +47,7 @@ class MoedaAPI: NSObject, MoedasProtocolo{
                 break
             case .failure:
                 print(response.error!)
+                if let status = response.response?.statusCode 
                 
                 break
             }
