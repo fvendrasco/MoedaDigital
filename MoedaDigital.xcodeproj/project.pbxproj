@@ -24,6 +24,8 @@
 		5FECC56025B9C5BE00F07700 /* MoedaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC55F25B9C5BE00F07700 /* MoedaDigitalTests.swift */; };
 		5FECC56B25B9C5BE00F07700 /* MoedaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC56A25B9C5BE00F07700 /* MoedaDigitalUITests.swift */; };
 		81C656DA5EB010C8C07E0525 /* Pods_MoedaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */; };
+		ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */; };
+		ABAAE72E25BF4B340093AE21 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = ABAAE72D25BF4B340093AE21 /* sad.png */; };
 		E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */; };
 		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
 		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
@@ -83,6 +85,8 @@
 		8B4DF9DD49C7F057338C895D /* Pods-MoedaDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital.debug.xcconfig"; sourceTree = "<group>"; };
 		8BA5FFD920C19CE2556F9A68 /* Pods-MoedaDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorScreen.xib; sourceTree = "<group>"; };
+		ABAAE72D25BF4B340093AE21 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = ../../../../../../Downloads/sad.png; sourceTree = "<group>"; };
 		AEA41529266FFD4D7322958B /* Pods-MoedaDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital.release.xcconfig"; sourceTree = "<group>"; };
 		B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital_MoedaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,14 @@
 			path = MoedaDigitalUITests;
 			sourceTree = "<group>";
 		};
+		ABAAE72425BF4A430093AE21 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				ABAAE72D25BF4B340093AE21 /* sad.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		F11D164525BA0C090046C5A9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
 				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
 				F19BAED925BF4DBB000D08C6 /* DatabaseController.swift */,
+				ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -264,6 +277,7 @@
 		F17337BE25BE0CEC00D007BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABAAE72425BF4A430093AE21 /* Assets */,
 				5FECC55125B9C5BE00F07700 /* Assets.xcassets */,
 				F1855CE125BB611D0029CBFA /* Storyboard.storyboard */,
 			);
@@ -384,7 +398,9 @@
 				5FECC55225B9C5BE00F07700 /* Assets.xcassets in Resources */,
 				5F15BF3125BB4E58005BAAF7 /* HomeTableViewCell.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
+				ABAAE72E25BF4B340093AE21 /* sad.png in Resources */,
 				5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */,
+				ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */,
 				F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
 				F1855CE225BB611D0029CBFA /* Storyboard.storyboard in Resources */,
