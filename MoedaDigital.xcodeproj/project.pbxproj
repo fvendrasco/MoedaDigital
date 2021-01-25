@@ -25,7 +25,6 @@
 		81C656DA5EB010C8C07E0525 /* Pods_MoedaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */; };
 		E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */; };
 		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
-		F11D165225BA0C7B0046C5A9 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11D165125BA0C7B0046C5A9 /* Home.xib */; };
 		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
 		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
 		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
@@ -84,7 +83,6 @@
 		B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital_MoedaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
 		F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaAPI.swift; sourceTree = "<group>"; };
-		F11D165125BA0C7B0046C5A9 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
 		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
 		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
@@ -149,11 +147,6 @@
 		5FECC53925B9C5BA00F07700 = {
 			isa = PBXGroup;
 			children = (
-				F11D167025BA0E710046C5A9 /* ViewModel */,
-				F11D164F25BA0C4C0046C5A9 /* View */,
-				F11D164E25BA0C280046C5A9 /* Application */,
-				F11D165625BA0CCB0046C5A9 /* Model */,
-				F11D164525BA0C090046C5A9 /* Service */,
 				5FECC54425B9C5BA00F07700 /* MoedaDigital */,
 				5FECC55E25B9C5BE00F07700 /* MoedaDigitalTests */,
 				5FECC56925B9C5BE00F07700 /* MoedaDigitalUITests */,
@@ -176,13 +169,12 @@
 		5FECC54425B9C5BA00F07700 /* MoedaDigital */ = {
 			isa = PBXGroup;
 			children = (
-				5FECC54B25B9C5BA00F07700 /* Main.storyboard */,
-				F11D165125BA0C7B0046C5A9 /* Home.xib */,
-				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
-				F1855CE125BB611D0029CBFA /* Storyboard.storyboard */,
-				5FECC55125B9C5BE00F07700 /* Assets.xcassets */,
-				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
-				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
+				F11D167025BA0E710046C5A9 /* ViewModel */,
+				F11D164F25BA0C4C0046C5A9 /* View */,
+				F11D165625BA0CCB0046C5A9 /* Model */,
+				F11D164525BA0C090046C5A9 /* Service */,
+				F11D164E25BA0C280046C5A9 /* Application */,
+				F17337BE25BE0CEC00D007BD /* Resources */,
 			);
 			path = MoedaDigital;
 			sourceTree = "<group>";
@@ -218,6 +210,13 @@
 			children = (
 				5FECC55625B9C5BE00F07700 /* Info.plist */,
 				5FECC54525B9C5BA00F07700 /* AppDelegate.swift */,
+				5FECC54B25B9C5BA00F07700 /* Main.storyboard */,
+				5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */,
+				5F15BF2F25BB4E58005BAAF7 /* HomeTableViewCell.xib */,
+				5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */,
+				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
+				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
+				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -228,12 +227,9 @@
 				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
 				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
-				5F15BF2F25BB4E58005BAAF7 /* HomeTableViewCell.xib */,
 				5F15BF3525BB6202005BAAF7 /* TabBarController.swift */,
 				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
-				5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
-				5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */,
 				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 			);
 			path = View;
@@ -254,6 +250,15 @@
 				F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F17337BE25BE0CEC00D007BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FECC55125B9C5BE00F07700 /* Assets.xcassets */,
+				F1855CE125BB611D0029CBFA /* Storyboard.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +369,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11D165225BA0C7B0046C5A9 /* Home.xib in Resources */,
 				5FECC55525B9C5BE00F07700 /* LaunchScreen.storyboard in Resources */,
 				5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */,
 				5FECC55225B9C5BE00F07700 /* Assets.xcassets in Resources */,
@@ -692,7 +696,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N4AFW77XS;
-				INFOPLIST_FILE = Application/Info.plist;
+				INFOPLIST_FILE = MoedaDigital/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,7 +717,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N4AFW77XS;
-				INFOPLIST_FILE = Application/Info.plist;
+				INFOPLIST_FILE = MoedaDigital/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

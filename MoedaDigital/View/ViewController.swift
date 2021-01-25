@@ -8,10 +8,9 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tabelaMoedas: UITableView!
-    @IBOutlet weak var botaoAtualiza: UIButton!
     @IBOutlet weak var labelDataTelaPrincipal: UILabel!
     @IBOutlet weak var pesquisaMoeda: UISearchBar!
 
@@ -35,6 +34,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Methods
     
+    func atualizaTabela(){
+        tabelaMoedas.reloadData()
+    }
+    
+    func atualizaData(){
+        let data = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"        
+        self.labelDataTelaPrincipal.text = dateFormatter.string(from: data)
+    }
+    
+    func load(){
+        if viewModel.moedaData.count != 0{
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.atualizaTabela()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.load()
+            }
+        }
+    }
+
+} //end
+
+extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
         return viewModel.moedaData.count
@@ -48,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
         let rate = lista.rate
         celula.labelRate.text = String(format: "$ %.0f%", rate)
-        
+
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
         
@@ -58,26 +84,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return 120
    }
-
-    @IBAction func atualizar(_ sender: Any) {
-        tabelaMoedas.reloadData()
-    }
     
-    func atualizaTabela(){
-        tabelaMoedas.reloadData()
-    }
-    
-    func atualizaData(){
-        let data = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/YYYY"        
-        self.labelDataTelaPrincipal.text = dateFormatter.string(from: data)
-    }
-    
-    func load(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.tabelaMoedas.reloadData()
-        }
-    }
-
 }
