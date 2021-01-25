@@ -8,11 +8,16 @@
 import UIKit
 
 class DetalhesMoedaViewController: UIViewController {
-
+    @IBOutlet weak var viewButton: UIView!
+    @IBOutlet weak var lastHour: UILabel!
+    @IBOutlet weak var lastMonth: UILabel!
+    @IBOutlet weak var lastYear: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewButton.layer.cornerRadius = 5
+        viewButton.layer.masksToBounds = true
     }
 
 

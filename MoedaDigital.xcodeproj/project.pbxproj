@@ -226,9 +226,9 @@
 			children = (
 				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
+				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
 				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
 				5F15BF3525BB6202005BAAF7 /* TabBarController.swift */,
-				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
 				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 			);

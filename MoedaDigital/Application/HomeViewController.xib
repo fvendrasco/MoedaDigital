@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
                 <outlet property="dateHomeView" destination="CBb-eA-wnX" id="ZCn-2m-FeD"/>
+                <outlet property="tabelaMoeda" destination="yV5-32-XxP" id="Qza-27-Rhu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +42,11 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yV5-32-XxP">
+                            <rect key="frame" x="8" y="169" width="359" height="382"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" red="0.1028401032" green="0.098229952159999995" blue="0.10349812360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -62,7 +68,7 @@
                 <constraint firstItem="qP7-rq-ddD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VpD-aw-Z9P"/>
                 <constraint firstItem="qP7-rq-ddD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="knY-Bj-Y44"/>
             </constraints>
-            <point key="canvasLocation" x="74" y="85"/>
+            <point key="canvasLocation" x="72.799999999999997" y="84.107946026986511"/>
         </view>
     </objects>
     <resources>
