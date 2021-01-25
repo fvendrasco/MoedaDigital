@@ -6,7 +6,7 @@ protocol MoedaViewDataType{
 }
 import Foundation
 
-class MoedaViewData {
+public class MoedaViewData {
     
     //MARK: - Properts
     private let model: Rate

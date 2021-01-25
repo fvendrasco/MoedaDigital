@@ -6,24 +6,54 @@
 //
 
 import UIKit
+import CoreData
 
 class DetalhesMoedaViewController: UIViewController {
+    @IBOutlet weak var viewButton: UIView!
+    @IBOutlet weak var lastHour: UILabel!
+    @IBOutlet weak var lastMonth: UILabel!
+    @IBOutlet weak var lastYear: UILabel!
+    @IBOutlet weak var adicionarButton: UIButton!
+    @IBOutlet weak var labelRate: UILabel!
+    @IBOutlet weak var labelTipo: UILabel!
+
+    var contexto: NSManagedObjectContext{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+
+    var lista: MoedaViewData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configura()
+        viewButton.layer.cornerRadius = 5
+        viewButton.layer.masksToBounds = true
+        
+    }
+    
+    func configura(){
+        labelTipo.text = lista?.assetIDQuote
+        guard let rate = lista?.rate else {return}
+        labelRate.text = String(format: "$ %.0f%", rate)
+        lastHour.text = lista?.time
+        lastMonth.text = lista?.time
+        lastYear.text = lista?.time
     }
 
+    @IBAction func AddMoeda(_ sender: Any) {
+        let moeda = Moeda(context: contexto)
 
-    /*
-    // MARK: - Navigation
+        moeda.assetIDQuote = lista?.assetIDQuote
+        moeda.rate = lista?.rate ?? 0
+        moeda.time = lista?.time
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        do{
+            try contexto.save()
+            navigationController?.popViewController(animated: true)
+        }catch{
+            print(error.localizedDescription)
+        }
     }
-    */
 
 }
