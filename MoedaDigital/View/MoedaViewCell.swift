@@ -12,5 +12,6 @@ class MoedaViewCell: UITableViewCell {
     
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelNome: UILabel!
-
+    @IBOutlet weak var labelEstrela: UILabel!
+    
 }

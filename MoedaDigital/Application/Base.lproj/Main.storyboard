@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="SkK-9h-IOJ">
             <objects>
-                <navigationController id="241-1J-yys" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="241-1J-yys" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UAK-Ka-mkF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="tHd-6L-Oxc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -82,16 +82,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-bz-Tg7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-bz-Tg7">
                                                     <rect key="frame" x="0.0" y="17" width="66.5" height="66.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-WK-sKj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-WK-sKj">
                                                     <rect key="frame" x="74" y="23" width="104" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCJ-TP-INb">
-                                                    <rect key="frame" x="74" y="50" width="51" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCJ-TP-INb">
+                                                    <rect key="frame" x="74" y="50" width="32.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -102,15 +102,24 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOK-rL-28f">
+                                                    <rect key="frame" x="149" y="17" width="23" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="KOK-rL-28f" firstAttribute="leading" secondItem="nJk-bz-Tg7" secondAttribute="trailing" constant="82.5" id="4xe-Ql-Ja1"/>
                                                 <constraint firstItem="gz1-WK-sKj" firstAttribute="leading" secondItem="nJk-bz-Tg7" secondAttribute="trailing" constant="7.5" id="9Bt-oM-Hy5"/>
                                                 <constraint firstAttribute="trailing" secondItem="TWP-jv-pWQ" secondAttribute="trailing" id="B4U-0d-5S6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KOK-rL-28f" secondAttribute="trailing" constant="100" id="Kbq-pv-ySA"/>
                                                 <constraint firstItem="nJk-bz-Tg7" firstAttribute="leading" secondItem="UlH-XC-mY1" secondAttribute="leading" id="LbU-6S-gUm"/>
                                                 <constraint firstItem="TWP-jv-pWQ" firstAttribute="top" secondItem="UlH-XC-mY1" secondAttribute="top" constant="37" id="QWh-7O-qiN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gz1-WK-sKj" secondAttribute="trailing" constant="94" id="cGI-3s-FX5"/>
                                                 <constraint firstItem="gz1-WK-sKj" firstAttribute="top" secondItem="UlH-XC-mY1" secondAttribute="topMargin" constant="12" id="cll-s0-WNg"/>
+                                                <constraint firstItem="KOK-rL-28f" firstAttribute="top" secondItem="UlH-XC-mY1" secondAttribute="topMargin" constant="6" id="eJa-vW-eaS"/>
                                                 <constraint firstItem="sCJ-TP-INb" firstAttribute="top" secondItem="UlH-XC-mY1" secondAttribute="topMargin" constant="39" id="gVs-6E-Iwq"/>
                                                 <constraint firstItem="nJk-bz-Tg7" firstAttribute="top" secondItem="UlH-XC-mY1" secondAttribute="top" constant="17" id="ga4-YZ-A0b"/>
                                                 <constraint firstItem="sCJ-TP-INb" firstAttribute="leading" secondItem="nJk-bz-Tg7" secondAttribute="trailing" constant="7.5" id="lJW-jS-k6m"/>
@@ -119,6 +128,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="labelEstrela" destination="KOK-rL-28f" id="1Ko-0S-I8m"/>
                                             <outlet property="labelNome" destination="sCJ-TP-INb" id="Rwl-qt-HdR"/>
                                             <outlet property="labelRate" destination="TWP-jv-pWQ" id="5rw-lR-EUc"/>
                                         </connections>

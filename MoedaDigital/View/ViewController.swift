@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tabelaMoedas: UITableView!
@@ -17,8 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
-    
-    
+
     //MARK: _- Life Cycle
 
     override func viewDidLoad() {
@@ -57,6 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
     }
 
+
 } //end
 
 extension ViewController: UITableViewDataSource {
@@ -77,12 +76,21 @@ extension ViewController: UITableViewDataSource {
 
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
-        
+
         return celula
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return 120
    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let lista = viewModel.moedaData[indexPath.row]
+        DetalhesMoedaService().recebeMoedaSelecionada(lista)
+        let controller = DetalhesMoedaViewController()
+        controller.lista = lista
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     
 }

@@ -33,6 +33,8 @@
 		F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */; };
 		F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */; };
 		F1855CE225BB611D0029CBFA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1855CE125BB611D0029CBFA /* Storyboard.storyboard */; };
+		F19BAED325BF3B40000D08C6 /* DetalhesMoedaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BAED225BF3B40000D08C6 /* DetalhesMoedaService.swift */; };
+		F19BAEDA25BF4DBB000D08C6 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BAED925BF4DBB000D08C6 /* DatabaseController.swift */; };
 		F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedaViewController.swift; sourceTree = "<group>"; };
 		F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalhesMoedaViewController.xib; sourceTree = "<group>"; };
 		F1855CE125BB611D0029CBFA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F19BAED225BF3B40000D08C6 /* DetalhesMoedaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedaService.swift; sourceTree = "<group>"; };
+		F19BAED925BF4DBB000D08C6 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		F39F171B31FF1AB71850B9C5 /* Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigital-MoedaDigitalUITests/Pods-MoedaDigital-MoedaDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */,
+				F19BAED225BF3B40000D08C6 /* DetalhesMoedaService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
 				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
+				F19BAED925BF4DBB000D08C6 /* DatabaseController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -514,7 +520,9 @@
 				F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */,
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
 				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
+				F19BAEDA25BF4DBB000D08C6 /* DatabaseController.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
+				F19BAED325BF3B40000D08C6 /* DetalhesMoedaService.swift in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,
 				5F15BF3C25BB6235005BAAF7 /* HomeViewController.swift in Sources */,
 				5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */,
