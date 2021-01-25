@@ -24,7 +24,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <point key="canvasLocation" x="141" y="85"/>
         </view>
-        <tabBarController id="zYW-0r-ePw">
+        <tabBarController id="zYW-0r-ePw" customClass="TabBarViewController" customModule="MoedaDigital" customModuleProvider="target">
             <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eUl-rV-Iy4">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
