@@ -15,8 +15,8 @@ class NewTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        moedaViewController = HomeViewController()
-        favoritoViewController = FavoritoViewController()
+        // moedaViewController = HomeViewController()
+        // favoritoViewController = FavoritoViewController()
         
         subViewController.append(moedaViewController!)
         subViewController.append(favoritoViewController!)
