@@ -54,7 +54,9 @@ class MoedaAPI: NSObject, MoedasProtocolo{
                         let alerta = UIAlertController(title: "Erro 400 - Bad Request ", message: "Há algo errado com a sua requisicao, tente novamente", preferredStyle: .alert)
                         alerta.addAction(UIAlertAction(title: "Fechar", style: .cancel, handler: nil))
                         return alerta
+                        
                         }
+                        
                     case 403:
                      func exibeErro() -> UIAlertController? {
                     let alerta = UIAlertController(title: "Erro 403 - Proibido ", message: "Há algo errado com a sua requisicao, tente novamente", preferredStyle: .alert)
