@@ -16,7 +16,8 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var buttonFavorito: UIButton!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
-
+    @IBOutlet weak var buttonEstrela: UIButton!
+    
     var lista: MoedaViewData?
     var viewModel: DetalhesMoedaViewModel = DetalhesMoedaViewModel()
 
@@ -25,7 +26,7 @@ class DetalhesMoedaViewController: UIViewController {
         configura()
         viewButton.layer.cornerRadius = 5
         viewButton.layer.masksToBounds = true
-        
+        moedaFavorita()
     }
     
     func configura(){
@@ -34,6 +35,13 @@ class DetalhesMoedaViewController: UIViewController {
         lastHour.text = lista?.time
         lastMonth.text = lista?.time
         lastYear.text = lista?.time
+    }
+    
+    func moedaFavorita(){
+        if viewModel.recuperaFavorito(lista!.assetIDQuote) == true {
+            buttonEstrela.setTitle("⭐", for: .normal)
+            buttonFavorito.setTitle("remover", for: .normal)
+        }
     }
 
     @IBAction func AddMoeda(_ sender: Any) {
