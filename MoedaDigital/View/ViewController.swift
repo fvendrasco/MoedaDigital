@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate {
 
@@ -14,11 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var labelDataTelaPrincipal: UILabel!
     @IBOutlet weak var pesquisaMoeda: UISearchBar!
 
-    
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
-    
-    
+
     //MARK: _- Life Cycle
 
     override func viewDidLoad() {
@@ -26,14 +24,14 @@ class ViewController: UIViewController, UITableViewDelegate {
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
-        atualizaTabela()
         atualizaData()
-        load()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        load()
+    }
+
     //MARK: - Methods
-    
     func atualizaTabela(){
         tabelaMoedas.reloadData()
     }
@@ -56,16 +54,15 @@ class ViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
-
+    
 } //end
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
+        
         return viewModel.moedaData.count
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoedaViewCell
@@ -73,11 +70,16 @@ extension ViewController: UITableViewDataSource {
         let lista = viewModel.moedaData[indexPath.row]
     
         let rate = lista.rate
-        celula.labelRate.text = String(format: "$ %.0f%", rate)
-
-        let nome = lista.assetIDQuote
-        celula.labelNome.text = nome
+        celula.labelRate.text = rate
         
+        let assetIDQuote = lista.assetIDQuote
+        celula.labelNome.text = assetIDQuote
+    
+        if viewModel.recuperaEstrela(assetIDQuote) == true {
+            celula.buttonEstrela.setTitle("⭐", for: .normal)
+        } else {
+        celula.buttonEstrela.setTitle("", for: .normal)
+        }
         return celula
     }
     
@@ -85,4 +87,15 @@ extension ViewController: UITableViewDataSource {
        return 120
    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let lista = viewModel.moedaData[indexPath.row]
+        DetalhesMoedaService().recebeMoedaSelecionada(lista)
+        let controller = DetalhesMoedaViewController()
+        controller.lista = lista
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
+
+
+
+

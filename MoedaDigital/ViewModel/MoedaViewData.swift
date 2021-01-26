@@ -2,11 +2,11 @@
 protocol MoedaViewDataType{
     var time: String {get}
     var assetIDQuote : String {get}
-    var rate : Double {get}
+    var rate : String {get}
 }
 import Foundation
 
-class MoedaViewData {
+public class MoedaViewData {
     
     //MARK: - Properts
     private let model: Rate
@@ -26,8 +26,10 @@ extension MoedaViewData: MoedaViewDataType {
         return model.assetIDQuote
     }
     
-    var rate: Double {
-        return model.rate
+    var rate: String {
+        let rate = model.rate
+        let rateString = String(format: "$ %.0f%", rate)
+        return rateString
     }
     
    

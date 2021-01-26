@@ -23,8 +23,10 @@ class MoedaViewModel: RespostaAPI  {
     
     private var listaDeValores: ModeloMoeda?
     private var api =  MoedaAPI()
+    private var moedaFavorita = MoedaDAO().recuperaDadosDaMoeda()
     var moedaData: [MoedaViewData] = []
     var delegate: MoedaViewDelegate?
+    
     
 
     //MARK: - Métodos
@@ -33,9 +35,21 @@ class MoedaViewModel: RespostaAPI  {
         api.configura(delegate: self)
         api.recebeMoeda()
     }
-
-}
     
+    func recuperaEstrela(_ nome: String) -> Bool{
+        var moedaExiste = false
+        for moedas in moedaFavorita{
+            if moedas.assetIDQuote == nome {
+               moedaExiste = true
+            }
+        }
+        return moedaExiste
+    }
+    
+
+} //end
+
+
     
  
     
