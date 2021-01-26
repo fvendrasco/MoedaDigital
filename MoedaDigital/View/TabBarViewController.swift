@@ -16,11 +16,27 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-    }
-    
-    func setupBar(){
-        let moedaController = UINavigationController(rootViewController: ViewController())
+        self.tabBarMoedas()
         
+      /* let moedaViewController = HomeViewController()
+                    
+        moedaViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+
+        let favoritoViewController = FavoritoViewController()
+
+        favoritoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+
+         let tabBarList = [firstViewController, secondViewController]
+
+         viewControllers = tabBarList
+ */
     }
     
+    func tabBarMoedas() {
+        let moedaViewController = UINavigationController(rootViewController: HomeViewController())
+        
+        let favoritoViewController = UINavigationController(rootViewController: FavoritoViewController())
+        
+        viewControllers = [moedaViewController, favoritoViewController]
+    }
 }
