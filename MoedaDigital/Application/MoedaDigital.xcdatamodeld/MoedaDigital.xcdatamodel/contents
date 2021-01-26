@@ -2,16 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Moeda" representedClassName="Moeda" syncable="YES" codeGenerationType="class">
         <attribute name="assetIDQuote" optional="YES" attributeType="String"/>
-        <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="time" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="Moedinhas" representedClassName="Moedinhas" syncable="YES" codeGenerationType="class">
-        <attribute name="assetIDQuote" optional="YES" attributeType="String"/>
-        <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rate" optional="YES" attributeType="String"/>
         <attribute name="time" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Moeda" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Moedinhas" positionX="-54" positionY="18" width="128" height="88"/>
     </elements>
 </model>

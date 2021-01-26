@@ -20,10 +20,6 @@ public class DetalhesMoedaService: moedaService {
     
     public func recebeMoedaSelecionada(_ lista: MoedaViewData) {
         let vc = DetalhesMoedaViewController()
-        if lista != nil{
-            vc.lista = lista
-        }
-        
-
+        vc.lista = lista
     }
 }
