@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MoedaDAO: NSObject {
+class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
 
     var gerenciadorDeResultados:NSFetchedResultsController<Moeda>?
     
@@ -67,6 +67,7 @@ class MoedaDAO: NSObject {
         
         atualizaContexto()
     }
+
         
 }
 

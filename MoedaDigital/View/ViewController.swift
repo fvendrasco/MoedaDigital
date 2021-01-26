@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate {
 
@@ -23,12 +24,13 @@ class ViewController: UIViewController, UITableViewDelegate {
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
-        atualizaTabela()
         atualizaData()
-        load()
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        load()
+    }
+
     //MARK: - Methods
     func atualizaTabela(){
         tabelaMoedas.reloadData()
@@ -47,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate {
                 self.atualizaTabela()
             }
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 self.load()
             }
         }
@@ -70,13 +72,14 @@ extension ViewController: UITableViewDataSource {
         let rate = lista.rate
         celula.labelRate.text = rate
         
-        let nome = lista.assetIDQuote
-        celula.labelNome.text = nome
-        
-        if viewModel.recuperaFavorito(nome) == true {
+        let assetIDQuote = lista.assetIDQuote
+        celula.labelNome.text = assetIDQuote
+    
+        if viewModel.recuperaEstrela(assetIDQuote) == true {
             celula.buttonEstrela.setTitle("⭐", for: .normal)
+        } else {
+        celula.buttonEstrela.setTitle("", for: .normal)
         }
-        
         return celula
     }
     
@@ -91,6 +94,8 @@ extension ViewController: UITableViewDataSource {
         controller.lista = lista
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
-    
 }
+
+
+
+
