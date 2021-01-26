@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ErrorScreenUIView: UIView {
+class ErrorScreenUIView: UIViewController {
 
     @IBAction func recarregaDadosButton(_ sender: UIButton) {
         MoedaAPI().recebeMoeda()
-    
+        self.present(ViewController(), animated: true, completion: nil)
+
+        
     }
    
 
