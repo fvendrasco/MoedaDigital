@@ -111,13 +111,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
         window?.makeKeyAndVisible()
-         */
-        
+         
+        --------------------------------------------------
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
         let mainVC = ViewController()
         window?.rootViewController = mainVC
+        */
+        let tabbarController = ViewController()
+        let navigateController = UINavigationController(rootViewController: NewTabBarViewController())
+
+        navigateController.isNavigationBarHidden = true
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigateController
+        window?.makeKeyAndVisible()
         
         return true
         
