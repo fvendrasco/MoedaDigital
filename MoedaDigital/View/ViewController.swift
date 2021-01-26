@@ -72,7 +72,11 @@ extension ViewController: UITableViewDataSource {
         
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
-      
+        
+        if viewModel.recuperaFavorito(nome) == true {
+            celula.buttonEstrela.setTitle("⭐", for: .normal)
+        }
+        
         return celula
     }
     

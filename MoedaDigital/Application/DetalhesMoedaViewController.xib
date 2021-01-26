@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetalhesMoedaViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
+                <outlet property="buttonEstrela" destination="Bb8-zv-gkG" id="eIC-O2-PD9"/>
                 <outlet property="buttonFavorito" destination="wx1-QZ-R9T" id="qGN-aJ-3eH"/>
                 <outlet property="labelRate" destination="uK7-OT-iqd" id="Zwf-Qt-63H"/>
                 <outlet property="labelTipo" destination="Vmo-WZ-8nH" id="PbQ-YL-BPg"/>
@@ -76,6 +77,10 @@
                                 <constraint firstAttribute="trailing" secondItem="wx1-QZ-R9T" secondAttribute="trailing" constant="6" id="u9O-gV-PfD"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Bb8-zv-gkG">
+                            <rect key="frame" x="246" y="80" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.55603402850000005" green="0.58895039559999995" blue="0.39604237679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -86,6 +91,7 @@
                         <constraint firstAttribute="trailing" secondItem="nWu-IS-9Qy" secondAttribute="trailing" constant="54" id="WS0-S3-AqG"/>
                         <constraint firstAttribute="bottom" secondItem="nWu-IS-9Qy" secondAttribute="bottom" constant="36" id="WVj-i9-HOu"/>
                         <constraint firstAttribute="height" constant="277" id="YEC-xR-PMP"/>
+                        <constraint firstItem="Bb8-zv-gkG" firstAttribute="top" secondItem="poD-Qr-Fzm" secondAttribute="top" constant="80" id="ZIV-Tr-8NK"/>
                         <constraint firstItem="nWu-IS-9Qy" firstAttribute="top" secondItem="uK7-OT-iqd" secondAttribute="bottom" constant="31" id="bAA-Oi-dKk"/>
                         <constraint firstAttribute="trailing" secondItem="Vmo-WZ-8nH" secondAttribute="trailing" constant="8" id="bVx-xh-dGs"/>
                         <constraint firstItem="Vmo-WZ-8nH" firstAttribute="top" secondItem="poD-Qr-Fzm" secondAttribute="top" constant="51" id="c6S-U3-Kl7"/>
