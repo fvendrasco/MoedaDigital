@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var labelDataTelaPrincipal: UILabel!
     @IBOutlet weak var pesquisaMoeda: UISearchBar!
 
-    
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
 
@@ -27,11 +26,10 @@ class ViewController: UIViewController, UITableViewDelegate {
         atualizaTabela()
         atualizaData()
         load()
+        
     }
     
-    
     //MARK: - Methods
-    
     func atualizaTabela(){
         tabelaMoedas.reloadData()
     }
@@ -49,22 +47,20 @@ class ViewController: UIViewController, UITableViewDelegate {
                 self.atualizaTabela()
             }
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.load()
             }
         }
     }
-
-
+    
 } //end
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
+        
         return viewModel.moedaData.count
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoedaViewCell
@@ -72,11 +68,11 @@ extension ViewController: UITableViewDataSource {
         let lista = viewModel.moedaData[indexPath.row]
     
         let rate = lista.rate
-        celula.labelRate.text = String(format: "$ %.0f%", rate)
-
+        celula.labelRate.text = rate
+        
         let nome = lista.assetIDQuote
         celula.labelNome.text = nome
-
+      
         return celula
     }
     

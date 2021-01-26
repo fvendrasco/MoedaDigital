@@ -11,7 +11,7 @@ class ErrorScreenUIView: UIView {
 
     @IBAction func recarregaDadosButton(_ sender: UIButton) {
         MoedaAPI().recebeMoeda()
-        
+    
     }
    
 
