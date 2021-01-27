@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,11 +17,18 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="tHd-6L-Oxc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a7K-W5-jG5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iH3-ga-Cui"/>
                     </connections>
@@ -43,6 +51,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="241-1J-yys" kind="relationship" relationship="viewControllers" id="R3B-9Q-6Pn"/>
+                        <segue destination="jfv-e6-sSC" kind="relationship" relationship="viewControllers" id="DZv-MB-hvj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9y-uu-Vcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,7 +161,7 @@
                             <constraint firstItem="iad-8S-O7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g4C-vZ-nJJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fE7-Cm-dkS"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="bitcoinsign.circle" catalog="system" id="fE7-Cm-dkS"/>
                     <navigationItem key="navigationItem" title="Moeda Digital" id="Pv3-GJ-MES"/>
                     <connections>
                         <outlet property="labelDataTelaPrincipal" destination="KKo-Oc-DFc" id="EWv-rn-b52"/>
@@ -164,8 +173,121 @@
             </objects>
             <point key="canvasLocation" x="172.5" y="-233.45070422535213"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="h0B-dw-Lux">
+            <objects>
+                <navigationController id="jfv-e6-sSC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Rjj-m2-h9b"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u7I-T3-wcy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BOZ-Lc-idU" kind="relationship" relationship="rootViewController" id="W96-TJ-nea"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvp-XP-KrH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501" y="462"/>
+        </scene>
+        <!--A-->
+        <scene sceneID="DKA-bt-e52">
+            <objects>
+                <viewController title="A" id="BOZ-Lc-idU" customClass="FavoritoViewController" customModule="MoedaDigital" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OMb-gX-Chp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-8H-P6z">
+                                <rect key="frame" x="16" y="44" width="288" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Lk-Sa-I2J">
+                                <rect key="frame" x="16" y="74" width="288" height="445"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wxG-pW-tri">
+                                    <size key="itemSize" width="134" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celulaFavoritos" id="u6m-ec-Bew" customClass="FavoritosCollectionViewCell" customModule="MoedaDigital" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kp9-cp-GsB">
+                                            <rect key="frame" x="0.0" y="0.0" width="134" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40T-t8-S44" customClass="FavoritoView">
+                                                    <rect key="frame" x="11" y="8" width="112" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-BF-DQm">
+                                                    <rect key="frame" x="11" y="37" width="112" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 31,010.20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="241-El-lSs">
+                                                    <rect key="frame" x="8" y="87" width="118" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.55603402850000005" green="0.58895039559999995" blue="0.39604237679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="labelRate" destination="241-El-lSs" id="RRF-0l-iYY"/>
+                                            <outlet property="labelType" destination="Pfu-BF-DQm" id="6LH-bM-7sG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hha-N4-XYq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oJA-8H-P6z" firstAttribute="trailing" secondItem="0Lk-Sa-I2J" secondAttribute="trailing" id="2JC-XM-xeb"/>
+                            <constraint firstItem="oJA-8H-P6z" firstAttribute="leading" secondItem="0Lk-Sa-I2J" secondAttribute="leading" id="3oz-SI-f6s"/>
+                            <constraint firstItem="oJA-8H-P6z" firstAttribute="top" secondItem="Hha-N4-XYq" secondAttribute="top" id="ETA-2R-by4"/>
+                            <constraint firstItem="0Lk-Sa-I2J" firstAttribute="top" secondItem="oJA-8H-P6z" secondAttribute="bottom" constant="8" id="Ivk-nB-QJG"/>
+                            <constraint firstItem="0Lk-Sa-I2J" firstAttribute="bottom" secondItem="Hha-N4-XYq" secondAttribute="bottom" id="PLb-Gj-ir6"/>
+                            <constraint firstItem="Hha-N4-XYq" firstAttribute="trailing" secondItem="0Lk-Sa-I2J" secondAttribute="trailing" constant="16" id="UfJ-gh-pTD"/>
+                            <constraint firstItem="0Lk-Sa-I2J" firstAttribute="leading" secondItem="Hha-N4-XYq" secondAttribute="leading" constant="16" id="mx2-Og-DkO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MoedaDigital" id="3cz-J5-onG"/>
+                    <connections>
+                        <outlet property="collectionMoeda" destination="0Lk-Sa-I2J" id="Ate-wb-L42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyJ-Jb-euh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172.5" y="461.61971830985914"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bitcoin" width="200" height="200"/>
+        <image name="bitcoinsign.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

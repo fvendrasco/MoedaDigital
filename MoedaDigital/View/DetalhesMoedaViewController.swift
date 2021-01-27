@@ -30,6 +30,7 @@ class DetalhesMoedaViewController: UIViewController {
     }
     
     func configura(){
+        
         labelTipo.text = lista?.assetIDQuote
         labelRate.text = lista?.rate
         lastHour.text = lista?.time
