@@ -39,7 +39,7 @@ class FavoritoViewController: UIViewController, UICollectionViewDataSource, UICo
             layout.estimatedItemSize = .zero
         }
 
-        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-20, height: 160) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-30, height: 140) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
     }
 
 }

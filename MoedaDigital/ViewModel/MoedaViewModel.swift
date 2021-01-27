@@ -37,14 +37,9 @@ class MoedaViewModel: RespostaAPI  {
     }
     
     func recuperaEstrela(_ nome: String) -> Bool{
-        var moedaExiste = false
-        for moedas in moedaFavorita{
-            if moedas.assetIDQuote == nome {
-               moedaExiste = true
-            }
-        }
-        return moedaExiste
+        MoedaDAO().verificaMoeda(nome)
     }
+    
     
 
 } //end

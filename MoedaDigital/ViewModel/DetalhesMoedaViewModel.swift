@@ -11,25 +11,40 @@ class DetalhesMoedaViewModel  {
     
     //MARK: - Properts
     private var moedaFavorita = MoedaDAO().recuperaDadosDaMoeda()
+    var valorMoeda: MoedaViewData
+    
+    init(valorMoeda: MoedaViewData) {
+        self.valorMoeda = valorMoeda
+    }
+
     
     //MARK: - Methods
-    func montaDicionario(_ lista: MoedaViewData) {
-
-        let dicionario:Dictionary<String, String> = [
-            "assetIDQuote": lista.assetIDQuote,
-            "rate": lista.rate,
-            "time": lista.time,
-        ]
-        MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
+    func montaDicionario() {
+        let verifica = MoedaDAO().verificaMoeda(valorMoeda.assetIDQuote)
+        if verifica == false {
+            let dicionario:Dictionary<String, String> = [
+                "assetIDQuote": valorMoeda.assetIDQuote,
+                "rate": valorMoeda.rate,
+                "time": valorMoeda.time,
+            ]
+            MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
+        }
+        else {
+            MoedaDAO().deletaMoeda(moeda: valorMoeda)
+        }
+    
     }
     
-    func recuperaFavorito(_ nome: String) -> Bool?{
+    func recuperaFavorito() -> Bool?{
         var moedaExiste = false
         for moedas in moedaFavorita{
-            if moedas.assetIDQuote == nome {
+            if moedas.assetIDQuote == valorMoeda.assetIDQuote {
                moedaExiste = true
             }
         }
         return moedaExiste
     }
+    
+    
+
 }
