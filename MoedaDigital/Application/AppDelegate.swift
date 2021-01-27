@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-<<<<<<< HEAD
+//<<<<<<< HEAD
         
         //MARK: - TabBar
         
@@ -121,16 +121,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainVC
         */
         let tabbarController = ViewController()
-        let navigateController = UINavigationController(rootViewController: NewTabBarViewController())
+        let navigateController = UINavigationController(rootViewController: TabBarViewController())
 
         navigateController.isNavigationBarHidden = true
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigateController
         window?.makeKeyAndVisible()
-=======
+//=======
             
 
->>>>>>> develop
+//>>>>>>> develop
         
         return true
         
