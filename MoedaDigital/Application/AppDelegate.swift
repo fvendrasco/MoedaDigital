@@ -99,24 +99,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var homeViewController : UINavigationController!
-    var favoritoViewController : UINavigationController!
-        
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
         //MARK: - TabBar
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let tabBarController = UITabBarController()
-        homeViewController = UINavigationController.init(rootViewController: HomeViewController())
-        favoritoViewController = UINavigationController.init(rootViewController: FavoritoViewController())
-        
-        tabBarController.viewControllers = [homeViewController, favoritoViewController]
-        
-        self.window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-                       
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = TabBarViewController()
+        self.window?.makeKeyAndVisible()
+              
         return true
         
     }
