@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
+    var listaMoeda: Array<MoedaViewData> = []
 
     //MARK: _- Life Cycle
 
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
+        pesquisaMoeda.delegate = self
         atualizaData()
     }
     
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
     func load(){
         if viewModel.moedaData.count != 0{
             DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.listaMoeda = self.viewModel.moedaData
                 self.atualizaTabela()
             }
         } else {
@@ -55,31 +58,21 @@ class ViewController: UIViewController {
         }
     }
     
+    
 } //end
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return viewModel.moedaData.count
+
+        return listaMoeda.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoedaViewCell
+        let valorMoeda = listaMoeda[indexPath.row]
+        celula.configuraCell(valorMoeda)
         
-        let valorMoeda = viewModel.moedaData[indexPath.row]
-    
-        let rate = valorMoeda.rate
-        celula.labelRate.text = rate
-        
-        let assetIDQuote = valorMoeda.assetIDQuote
-        celula.labelNome.text = assetIDQuote
-    
-        if viewModel.recuperaEstrela(assetIDQuote) == true {
-            celula.buttonEstrela.setTitle("⭐", for: .normal)
-        } else {
-        celula.buttonEstrela.setTitle("", for: .normal)
-        }
         return celula
     }
     
@@ -91,10 +84,22 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let valorMoeda = viewModel.moedaData[indexPath.row]
+        let valorMoeda = listaMoeda[indexPath.row]
         let model = DetalhesMoedaViewModel(valorMoeda: valorMoeda)
         let controller = DetalhesMoedaViewController(viewModel: model)
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+}
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        listaMoeda = viewModel.moedaData
+        if searchText != ""{
+            listaMoeda = listaMoeda.filter({ $0.assetIDQuote.contains(searchText) })
+        }
+        atualizaTabela()
     }
     
 }

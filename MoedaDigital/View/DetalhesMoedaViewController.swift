@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var viewButton: UIView!
