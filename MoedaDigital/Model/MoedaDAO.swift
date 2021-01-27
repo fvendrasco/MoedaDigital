@@ -67,6 +67,11 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
         
         atualizaContexto()
     }
+    
+    func deletaMoeda(moeda:Moeda){
+        contexto.delete(moeda)
+        atualizaContexto()
+    }
 
         
 }

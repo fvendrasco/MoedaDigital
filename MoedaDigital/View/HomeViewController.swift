@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UINavigationController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var dateHomeView: UILabel!
     override func viewDidLoad() {
