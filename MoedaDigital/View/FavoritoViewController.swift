@@ -24,7 +24,7 @@ class FavoritoViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let celulaFavoritos = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFavoritos", for: indexPath)as! FavoritoViewCell
+        let celulaFavoritos = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFavoritos", for: indexPath)as! FavoritosCollectionViewCell
         
         let listaMoedas = viewModel.recuperaFavoritos()[indexPath.row]
         
