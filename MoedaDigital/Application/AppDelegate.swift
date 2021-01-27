@@ -102,6 +102,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //<<<<<<< HEAD
+<<<<<<< HEAD
+        
+        //MARK: - TabBar
+        
+       /* window = UIWindow()
+        window?.makeKeyAndVisible()
+        window?.rootViewController = HomeViewController()
+       -------------------------------------------------------
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        window?.makeKeyAndVisible()
+         
+        --------------------------------------------------
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let mainVC = ViewController()
+        window?.rootViewController = mainVC
+        */
+        let tabbarController = ViewController()
+        let navigateController = UINavigationController(rootViewController: TabBarViewController())
+
+        navigateController.isNavigationBarHidden = true
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigateController
+        window?.makeKeyAndVisible()
+//=======
+            
+
+=======
 //        
 //        //MARK: - TabBar
 //        
@@ -130,6 +160,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //=======
 //            
 //
+>>>>>>> develop
 //>>>>>>> develop
         
         return true
