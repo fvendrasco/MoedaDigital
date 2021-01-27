@@ -99,13 +99,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//<<<<<<< HEAD
-//<<<<<<< HEAD
-        
+
+
+
         //MARK: - TabBar
+        let viewControllerTabBar = Bundle.main.loadNibNamed("TabBarViewController", owner: nil, options: nil)
         
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = TabBarViewController()
+        self.window?.makeKeyAndVisible()
+
        /* window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = HomeViewController()
@@ -162,6 +167,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //>>>>>>> develop
 //>>>>>>> develop
+
         
         return true
         

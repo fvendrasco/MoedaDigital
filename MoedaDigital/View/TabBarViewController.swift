@@ -9,9 +9,20 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    @IBOutlet weak var buttonMoedasTabBar: UIViewController!
+
+    @IBOutlet weak var buttonMoedasTabBar: TabBarViewController!
     
-    @IBOutlet weak var buttonFavoritasTabBar: UIViewController!
+    @IBOutlet weak var buttonFavoritasTabBar: TabBarViewController!
+    
+    init() {
+        super.init(nibName: "HomeViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+   
     
     init(){
         
@@ -24,23 +35,10 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
         self.tabBarMoedas()
         
-      /* let moedaViewController = HomeViewController()
-                    
-        moedaViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-
-        let favoritoViewController = FavoritoViewController()
-
-        favoritoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
-
-         let tabBarList = [firstViewController, secondViewController]
-
-         viewControllers = tabBarList
- */
     }
-    
+         
     func tabBarMoedas() {
         let moedaViewController = UINavigationController(rootViewController: HomeViewController())
         
