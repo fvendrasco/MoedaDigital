@@ -24,7 +24,7 @@ class ErrorScreenUIView: UIViewController {
         
     }
    
-    func exibeTelaErro() {
+    func exibeHomeViewController() {
         self.present(ViewController(), animated: true, completion: nil)
     }
 
