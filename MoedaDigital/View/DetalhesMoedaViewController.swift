@@ -17,10 +17,19 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var buttonEstrela: UIButton!
-    
-    var lista: MoedaViewData?
-    var viewModel: DetalhesMoedaViewModel = DetalhesMoedaViewModel()
 
+    var viewModel: DetalhesMoedaViewModel
+    
+    init(viewModel: DetalhesMoedaViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: "DetalhesMoedaViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configura()
@@ -28,25 +37,25 @@ class DetalhesMoedaViewController: UIViewController {
         viewButton.layer.masksToBounds = true
         moedaFavorita()
     }
-    
+
     func configura(){
         
-        labelTipo.text = lista?.assetIDQuote
-        labelRate.text = lista?.rate
-        lastHour.text = lista?.time
-        lastMonth.text = lista?.time
-        lastYear.text = lista?.time
+        labelTipo.text = viewModel.valorMoeda.assetIDQuote
+        labelRate.text = viewModel.valorMoeda.rate
+        lastHour.text = viewModel.valorMoeda.time
+        lastMonth.text = viewModel.valorMoeda.time
+        lastYear.text = viewModel.valorMoeda.time
     }
     
     func moedaFavorita(){
-        if viewModel.recuperaFavorito(lista!.assetIDQuote) == true {
+        if viewModel.recuperaFavorito() == true {
             buttonEstrela.setTitle("⭐", for: .normal)
             buttonFavorito.setTitle("remover", for: .normal)
         }
     }
 
     @IBAction func AddMoeda(_ sender: Any) {
-        viewModel.montaDicionario(lista!)
+        viewModel.montaDicionario()
         self.navigationController?.popViewController(animated: true)
     }
 
