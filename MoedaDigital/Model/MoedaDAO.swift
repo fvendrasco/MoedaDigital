@@ -68,9 +68,23 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
         atualizaContexto()
     }
     
-    func deletaMoeda(moeda:Moeda){
-        contexto.delete(moeda)
-        atualizaContexto()
+    func deletaMoeda(moeda:MoedaViewData){
+        for listaDeMoedas in recuperaDadosDaMoeda(){
+            if listaDeMoedas.assetIDQuote == moeda.assetIDQuote {
+                contexto.delete(listaDeMoedas)
+                atualizaContexto()
+            }
+        }
+    }
+    
+    func verificaMoeda(_ nome: String) -> Bool {
+        var moedaExiste = false
+        for listaDeMoedas in recuperaDadosDaMoeda(){
+            if listaDeMoedas.assetIDQuote == nome {
+               moedaExiste = true
+            }
+        }
+        return moedaExiste
     }
 
         

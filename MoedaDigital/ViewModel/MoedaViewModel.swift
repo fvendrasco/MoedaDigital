@@ -11,6 +11,7 @@ class MoedaViewModel: RespostaAPI  {
         
         for moedas in modelo.rates{
             moedaData.append(MoedaViewData(model: moedas))
+            
         }
 
     }
@@ -24,7 +25,7 @@ class MoedaViewModel: RespostaAPI  {
     private var listaDeValores: ModeloMoeda?
     private var api =  MoedaAPI()
     private var moedaFavorita = MoedaDAO().recuperaDadosDaMoeda()
-    var moedaData: [MoedaViewData] = []
+    var moedaData: Array<MoedaViewData> = []
     var delegate: MoedaViewDelegate?
     
     
@@ -36,15 +37,7 @@ class MoedaViewModel: RespostaAPI  {
         api.recebeMoeda()
     }
     
-    func recuperaEstrela(_ nome: String) -> Bool{
-        var moedaExiste = false
-        for moedas in moedaFavorita{
-            if moedas.assetIDQuote == nome {
-               moedaExiste = true
-            }
-        }
-        return moedaExiste
-    }
+
     
 
 } //end
