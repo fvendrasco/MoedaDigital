@@ -13,14 +13,14 @@ class DetalhesMoedaViewModel  {
     private var moedaFavorita = MoedaDAO().recuperaDadosDaMoeda()
     
     //MARK: - Methods
-    func montaDicionario(_ lista: MoedaViewData) -> Dictionary<String, Any> {
+    func montaDicionario(_ lista: MoedaViewData) {
 
         let dicionario:Dictionary<String, String> = [
             "assetIDQuote": lista.assetIDQuote,
             "rate": lista.rate,
             "time": lista.time,
         ]
-            return dicionario
+        MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
     }
     
     func recuperaFavorito(_ nome: String) -> Bool?{
@@ -32,5 +32,4 @@ class DetalhesMoedaViewModel  {
         }
         return moedaExiste
     }
-    
 }

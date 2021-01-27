@@ -255,17 +255,13 @@
 			children = (
 				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
+				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
+				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
+				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
+				ABAAE73225BF57C00093AE21 /* ErrorScreenUIView.swift */,
 				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
 				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
-				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
-
-				5FF1668725C095980050A3CC /* NewTabBarViewController.swift */,
-
-				ABAAE73225BF57C00093AE21 /* ErrorScreenUIView.swift */,
-
-				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
-
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -553,7 +549,6 @@
 				F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */,
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
 				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
-				5FF1668825C095990050A3CC /* NewTabBarViewController.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				F19BAED325BF3B40000D08C6 /* DetalhesMoedaService.swift in Sources */,
 				F1A626CD25C19EC9009952F7 /* FavoritosCollectionViewCell.swift in Sources */,

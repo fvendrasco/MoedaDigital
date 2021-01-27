@@ -12,7 +12,7 @@ class FavoritoViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var collectionMoeda: UICollectionView!
     
     var viewModel = FavoritosViewModel()
-
+  
     override func viewDidLoad() {
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
