@@ -46,8 +46,7 @@ class DetalhesMoedaViewController: UIViewController {
     }
 
     @IBAction func AddMoeda(_ sender: Any) {
-        let dicionario = viewModel.montaDicionario(lista!)
-        MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
+        viewModel.montaDicionario(lista!)
         self.navigationController?.popViewController(animated: true)
     }
 

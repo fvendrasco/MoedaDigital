@@ -253,13 +253,13 @@
 			children = (
 				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
-				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
-				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
-				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
-				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
-				ABAAE73225BF57C00093AE21 /* ErrorScreenUIView.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
 				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
+				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
+				ABAAE73225BF57C00093AE21 /* ErrorScreenUIView.swift */,
+				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
+				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
+				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
