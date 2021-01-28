@@ -8,6 +8,7 @@
 import UIKit
 
 class DetalhesMoedaViewController: UIViewController {
+    //MARK: IBOutlet
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet weak var lastHour: UILabel!
     @IBOutlet weak var lastMonth: UILabel!
@@ -17,9 +18,10 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var buttonEstrela: UIButton!
 
+    //MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
     
-    
+    //MARK: - Constructor
     init(viewModel: DetalhesMoedaViewModel?) {
         self.viewModel = viewModel
         
@@ -30,6 +32,7 @@ class DetalhesMoedaViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configura()
@@ -38,6 +41,7 @@ class DetalhesMoedaViewController: UIViewController {
         moedaFavorita()
     }
 
+    //MARK: - Methods
     func configura(){
         if viewModel?.valorMoeda != nil {
             guard let valor = viewModel?.valorMoeda else {return}
@@ -64,6 +68,7 @@ class DetalhesMoedaViewController: UIViewController {
         }
     }
 
+    //MARK: - IBAction
     @IBAction func estadoMoeda(_ sender: Any) {
         viewModel?.montaDicionario()
         self.navigationController?.popViewController(animated: true)

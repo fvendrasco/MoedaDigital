@@ -95,6 +95,7 @@ extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaMoeda = viewModel.moedaData
+        
         if searchText != ""{
             listaMoeda = listaMoeda.filter({ $0.assetIDQuote.contains(searchText) })
         }

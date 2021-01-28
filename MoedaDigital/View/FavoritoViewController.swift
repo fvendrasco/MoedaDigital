@@ -7,25 +7,21 @@
 
 import UIKit
 
-class FavoritoViewController: UIViewController, UICollectionViewDelegateFlowLayout {
-    
+class FavoritoViewController: UIViewController{
+    //MARK: - IBOutlet
     @IBOutlet weak var collectionMoeda: UICollectionView!
     
+    //MARK: - Properts
     var viewModel: FavoritosViewModel = FavoritosViewModel()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
-        collectionMoeda.reloadData()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = .zero
-        }
-
-        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-15, height: 140) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+    override func viewWillAppear(_ animated: Bool) {
+        collectionMoeda.reloadData()
     }
 
 } //end
@@ -55,4 +51,15 @@ extension FavoritoViewController: UICollectionViewDelegate {
         self.navigationController?.pushViewController(controller, animated: true)
     }
 
+}
+
+extension FavoritoViewController:UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = .zero
+        }
+
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-15, height: 140) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+    }
 }
