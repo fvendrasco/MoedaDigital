@@ -103,8 +103,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+//
+//        //MARK: - TabBar
+//        let viewControllerTabBar = Bundle.main.loadNibNamed("TabBarViewController", owner: nil, options: nil)
+//
+//    
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = TabBarViewController()
+//        self.window?.makeKeyAndVisible()
+
+
+
         //MARK: - TabBar
       
+
        /* window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = HomeViewController()

@@ -27,7 +27,7 @@ class MoedaAPI: NSObject, MoedasProtocolo{
     }
     
     func recebeMoeda(){
-        guard let url = URL(string: "https://rest.coinapi.io/v1/exchangerate/BTC?apikey=50A700C0-CC3E-4D1D-B1A6-7E3BF21E8E0F") else {return}
+        guard let url = URL(string: "https://rest.coinapi.io/v1/exchangerate/BTC?apikey=176BDEED-E962-4E3F-9F50-E6295843D003") else {return}
         Alamofire.request(url, method: .get).responseJSON { (response) in
             
             switch response.result {

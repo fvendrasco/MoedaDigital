@@ -7,24 +7,21 @@
 
 import UIKit
 
-class FavoritoViewController: UIViewController, UICollectionViewDelegateFlowLayout {
-    
+class FavoritoViewController: UIViewController{
+    //MARK: - IBOutlet
     @IBOutlet weak var collectionMoeda: UICollectionView!
     
+    //MARK: - Properts
     var viewModel: FavoritosViewModel = FavoritosViewModel()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = .zero
-        }
-
-        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-30, height: 140) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+    override func viewWillAppear(_ animated: Bool) {
+        collectionMoeda.reloadData()
     }
 
 } //end
@@ -39,22 +36,30 @@ extension FavoritoViewController: UICollectionViewDataSource{
         
         let valorMoeda = viewModel.recuperaFavoritos()[indexPath.row]
         
-        let f: Array<Any> = viewModel.recuperaFavoritos()
-        
-        
         celulaFavoritos.configuraCelulaFavoritos(valorMoeda)
         
         return celulaFavoritos
     }
 }
 
-//extension FavoritoViewController: UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let valor = viewModel.recuperaFavoritos()[indexPath.row]
-//        let model = DetalhesFavoritosViewModel(valorMoeda: valor)
-//        let controller = DetalhesMoedaViewController(viewModel: model)
-//        self.navigationController?.pushViewController(controller, animated: true)
-//    }
-//
-//}
+extension FavoritoViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let valor = viewModel.recuperaFavoritos()[indexPath.row]
+        let model = DetalhesMoedaViewModel(valorMoeda: nil, moedaSalva: valor)
+        let controller = DetalhesMoedaViewController(viewModel: model)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+
+}
+
+extension FavoritoViewController:UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = .zero
+        }
+
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-15, height: 140) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+    }
+}
