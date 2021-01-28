@@ -254,6 +254,10 @@
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
 				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
+
+
+				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
+
 				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
 				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
 				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
