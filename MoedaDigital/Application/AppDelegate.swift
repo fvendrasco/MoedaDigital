@@ -104,13 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
         //MARK: - TabBar
-        let viewControllerTabBar = Bundle.main.loadNibNamed("TabBarViewController", owner: nil, options: nil)
-        
-
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = TabBarViewController()
-        self.window?.makeKeyAndVisible()
-
+      
        /* window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = HomeViewController()
@@ -132,41 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        navigateController.isNavigationBarHidden = true
 //        window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.rootViewController = navigateController
-//        window?.makeKeyAndVisible()
-//=======
-            
-
-//=======
-//        
-//        //MARK: - TabBar
-//        
-//       /* window = UIWindow()
-//        window?.makeKeyAndVisible()
-//        window?.rootViewController = HomeViewController()
-//       -------------------------------------------------------
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
-//        window?.makeKeyAndVisible()
-//         
-//        --------------------------------------------------
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.makeKeyAndVisible()
-//        
-//        let mainVC = ViewController()
-//        window?.rootViewController = mainVC
-//        */
-//        let tabbarController = ViewController()
-//        let navigateController = UINavigationController(rootViewController: NewTabBarViewController())
-//
-//        navigateController.isNavigationBarHidden = true
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = navigateController
-//        window?.makeKeyAndVisible()
-//=======
-//            
-//
-//>>>>>>> develop
-//>>>>>>> develop
+//        window?.makeKeyAndVisible()    
 
         
         return true
