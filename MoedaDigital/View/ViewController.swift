@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class ViewController: UIViewController {
 
@@ -85,7 +84,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let valorMoeda = listaMoeda[indexPath.row]
-        let model = DetalhesMoedaViewModel(valorMoeda: valorMoeda)
+        let model = DetalhesMoedaViewModel(valorMoeda: valorMoeda, moedaSalva: nil)
         let controller = DetalhesMoedaViewController(viewModel: model)
         self.navigationController?.pushViewController(controller, animated: true)
     }
