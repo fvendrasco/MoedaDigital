@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
 //        //MARK: - TabBar
-           
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = TabBarViewController()
-        self.window?.makeKeyAndVisible()
+//           
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = TabBarViewController()
+//        self.window?.makeKeyAndVisible()
 
         return true
         

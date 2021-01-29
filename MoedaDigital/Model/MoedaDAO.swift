@@ -60,7 +60,7 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
             moeda = NSManagedObject(entity: entidade!, insertInto: contexto)
         }
         
-
+        moeda?.setValue(dicionarioDeMoeda["name"] as? String, forKey: "name")
         moeda?.setValue(dicionarioDeMoeda["assetId"] as? String, forKey: "assetId")
         moeda?.setValue(dicionarioDeMoeda["LastMonth"] as? String, forKey: "volumeMonth")
         moeda?.setValue(dicionarioDeMoeda["lastHour"] as? String, forKey: "volumeHour")

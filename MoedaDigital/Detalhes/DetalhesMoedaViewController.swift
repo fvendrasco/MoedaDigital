@@ -16,7 +16,8 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var buttonFavorito: UIButton!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
-    @IBOutlet weak var buttonEstrela: UIButton!
+    @IBOutlet weak var labelEstrela: UILabel!
+    
 
     //MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
@@ -63,7 +64,7 @@ class DetalhesMoedaViewController: UIViewController {
     
     func moedaFavorita(){
         if viewModel?.recuperaFavorito() == true {
-            buttonEstrela.setTitle("⭐", for: .normal)
+            labelEstrela.text = "⭐"
             buttonFavorito.setTitle("remover", for: .normal)
         }
     }
@@ -71,7 +72,10 @@ class DetalhesMoedaViewController: UIViewController {
     //MARK: - IBAction
     @IBAction func estadoMoeda(_ sender: Any) {
         viewModel?.montaDicionario()
-        self.navigationController?.popViewController(animated: true)
+        buttonFavorito.setTitle("operação realizada", for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
 }

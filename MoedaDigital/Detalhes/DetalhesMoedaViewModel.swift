@@ -27,6 +27,7 @@ class DetalhesMoedaViewModel  {
             if MoedaDAO().verificaMoeda(valor.asset_id) == false {
                 verifica = false
                 let dicionario:Dictionary<String, String> = [
+                    "name" : valor.name,
                     "assetId": valor.asset_id,
                     "price_usd": valor.price_usd,
                     "lastHour": valor.volume_1hrs_usd,
