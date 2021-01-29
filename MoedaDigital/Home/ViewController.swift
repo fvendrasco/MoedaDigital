@@ -56,15 +56,14 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
+
 } //end
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return viewModel.moedaData.count
+        return listaMoeda.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,14 +92,13 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UISearchBarDelegate {
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        listaMoeda = viewModel.moedaData
-        
-        if searchText != ""{
-            listaMoeda = listaMoeda.filter({ $0.asset_id.contains(searchText) })
-        }
-        atualizaTabela()
+func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    listaMoeda = viewModel.moedaData
+    if searchText != ""{
+        listaMoeda = listaMoeda.filter({ $0.name.contains(searchText) })
     }
+        atualizaTabela()
+}
     
 }
 

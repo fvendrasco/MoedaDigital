@@ -14,6 +14,7 @@ class MoedaViewCell: UITableViewCell {
     @IBOutlet weak var labelId: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
     @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imagemMoeda: UIImageView!
     
     var viewModel: MoedaViewCellModel = MoedaViewCellModel()
     
@@ -26,6 +27,9 @@ class MoedaViewCell: UITableViewCell {
         } else {
             labelEstrela.text = ""
         }
+//        
+//        viewModel.recuperaIcone(imagem: imagemMoeda, id: moeda.id_icon)
+        
     }
     
 }

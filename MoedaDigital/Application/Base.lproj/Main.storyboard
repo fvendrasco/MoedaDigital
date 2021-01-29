@@ -142,6 +142,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="imagemMoeda" destination="nJk-bz-Tg7" id="6s4-Xi-YYk"/>
                                             <outlet property="labelEstrela" destination="P7P-Hx-k8z" id="zsM-9a-t1s"/>
                                             <outlet property="labelId" destination="sCJ-TP-INb" id="Rwl-qt-HdR"/>
                                             <outlet property="labelName" destination="gz1-WK-sKj" id="4vI-eS-haW"/>
@@ -270,6 +271,7 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.55603402850000005" green="0.58895039559999995" blue="0.39604237679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="labelName" destination="40T-t8-S44" id="O0s-cw-8Dx"/>
                                             <outlet property="labelRate" destination="241-El-lSs" id="RRF-0l-iYY"/>
                                             <outlet property="labelType" destination="Pfu-BF-DQm" id="6LH-bM-7sG"/>
                                         </connections>
