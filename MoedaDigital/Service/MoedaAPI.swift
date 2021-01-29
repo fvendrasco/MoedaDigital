@@ -42,28 +42,33 @@ class MoedaAPI: NSObject, MoedasProtocolo{
                         
                     } catch let erro {
                         print(erro)
-                        print("falhou aqui")
+                        if let codigoErro = response.response?.statusCode {
+                            
+                            if codigoErro == 400 {
+                                print("400 Bad Request - Há algo de errado com a sua solicitação")
+                            }
+                            
+                            if codigoErro == 401 {
+                                print("400 Unauthorized - Sua chave API está incorreta")
+                            }
+                          
+                            if codigoErro == 403 {
+                                print("403 Forbidden - Sua chave API não tem os privilégios necessários")
+                            }
+                            
+                            if codigoErro == 429 {
+                                print("429 Too many requests - Excedida a quantidade de requisicoes com a sua chave API")
+                            }
+                            
+                            if codigoErro == 550 {
+                                print("550 No Data - Sua requisicao não retorno nenhum dado")
+                            }
+                        }
+
                     }
-//                }
                 break
             case .failure:
                 print(response.error!)
-                if let status = response.response?.statusCode {
-                    switch (status) {
-                    case 400:
-                        ErroModel().exibeErro()
-                    case 403:
-                        ErroModel().exibeErro()
-                    case 429:
-                        ErroModel().exibeErro()
-                    case 550:
-                        ErroModel().exibeErro()
-                        break
-                        
-                    default:
-                        break
-                    }
-                }
                 
                 break
             }
