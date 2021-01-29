@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,52 +8,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritosCollectionViewCell" customModule="MoedaDigital" customModuleProvider="target">
-            <connections>
-                <outlet property="labelImage" destination="PrJ-68-ikN" id="Bke-as-k3Y"/>
-                <outlet property="labelName" destination="34d-bh-n66" id="Ws1-ug-pEV"/>
-                <outlet property="labelRate" destination="ERl-i2-3BU" id="vrK-IU-Yjr"/>
-                <outlet property="labelType" destination="yyJ-A2-RXI" id="8If-xl-zOe"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ilb-a0-p9T">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoritoCell" id="Ilb-a0-p9T" customClass="FavoritosCollectionViewCell" customModule="MoedaDigital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Evf-oI-tMw">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="PrJ-68-ikN">
-                        <rect key="frame" x="70" y="0.0" width="30" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yyJ-A2-RXI">
-                        <rect key="frame" x="0.0" y="36" width="100" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55x-Cw-MN1">
+                        <rect key="frame" x="0.0" y="8" width="128" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$31,000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERl-i2-3BU">
-                        <rect key="frame" x="0.0" y="71" width="100" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="valor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-iJ-ghk">
+                        <rect key="frame" x="0.0" y="87" width="128" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34d-bh-n66">
-                        <rect key="frame" x="2" y="17" width="98" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cST-9i-1iV">
+                        <rect key="frame" x="0.0" y="39" width="128" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.54589575530000001" green="0.59499567750000004" blue="0.35875415799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="55x-Cw-MN1" firstAttribute="trailing" secondItem="cST-9i-1iV" secondAttribute="trailing" id="0Fr-er-LNB"/>
+                    <constraint firstItem="55x-Cw-MN1" firstAttribute="leading" secondItem="pOD-iJ-ghk" secondAttribute="leading" id="DgG-v3-22s"/>
+                    <constraint firstItem="55x-Cw-MN1" firstAttribute="leading" secondItem="cST-9i-1iV" secondAttribute="leading" id="FVJ-tJ-9ma"/>
+                    <constraint firstAttribute="trailing" secondItem="cST-9i-1iV" secondAttribute="trailing" id="LR7-oq-Nnf"/>
+                    <constraint firstItem="pOD-iJ-ghk" firstAttribute="top" secondItem="cST-9i-1iV" secondAttribute="bottom" constant="27" id="LuB-4f-7v9"/>
+                    <constraint firstItem="55x-Cw-MN1" firstAttribute="trailing" secondItem="pOD-iJ-ghk" secondAttribute="trailing" id="VbV-jD-ye3"/>
+                    <constraint firstItem="cST-9i-1iV" firstAttribute="top" secondItem="55x-Cw-MN1" secondAttribute="bottom" constant="2" id="cDY-Kh-VwQ"/>
+                    <constraint firstItem="cST-9i-1iV" firstAttribute="leading" secondItem="Evf-oI-tMw" secondAttribute="leading" id="csE-pZ-yZr"/>
+                    <constraint firstItem="pOD-iJ-ghk" firstAttribute="top" secondItem="cST-9i-1iV" secondAttribute="bottom" constant="27" id="gwg-fn-AON"/>
+                    <constraint firstItem="55x-Cw-MN1" firstAttribute="top" secondItem="Evf-oI-tMw" secondAttribute="topMargin" id="h3g-Pz-aVe"/>
+                    <constraint firstItem="pOD-iJ-ghk" firstAttribute="leading" secondItem="Evf-oI-tMw" secondAttribute="leading" id="nw6-Zo-aps"/>
+                    <constraint firstAttribute="trailing" secondItem="pOD-iJ-ghk" secondAttribute="trailing" id="y6X-kK-bsj"/>
+                </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="100" height="100"/>
-            <point key="canvasLocation" x="-446.37681159420293" y="42.857142857142854"/>
+            <size key="customSize" width="128" height="128"/>
+            <connections>
+                <outlet property="labelName" destination="55x-Cw-MN1" id="zoW-qc-R3e"/>
+                <outlet property="labelRate" destination="pOD-iJ-ghk" id="CXP-Gw-EyL"/>
+                <outlet property="labelType" destination="cST-9i-1iV" id="GPO-iL-pTw"/>
+            </connections>
+            <point key="canvasLocation" x="-427.19999999999999" y="52.173913043478265"/>
         </collectionViewCell>
     </objects>
 </document>
