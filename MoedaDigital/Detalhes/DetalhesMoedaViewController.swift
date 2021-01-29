@@ -39,6 +39,7 @@ class DetalhesMoedaViewController: UIViewController {
         viewButton.layer.cornerRadius = 5
         viewButton.layer.masksToBounds = true
         moedaFavorita()
+        setupAccessibility()
     }
 
     //MARK: - Methods
@@ -72,6 +73,34 @@ class DetalhesMoedaViewController: UIViewController {
     @IBAction func estadoMoeda(_ sender: Any) {
         viewModel?.montaDicionario()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func setupAccessibility(){
+        labelRate.isAccessibilityElement = true
+        labelTipo.isAccessibilityElement = true
+        viewButton.isAccessibilityElement = true
+        lastDay.isAccessibilityElement = true
+        buttonFavorito.isAccessibilityElement = true
+        lastMonth.isAccessibilityElement = true
+        lastHour.isAccessibilityElement = true
+        buttonEstrela.isAccessibilityElement = true
+        
+        labelRate.accessibilityTraits = .staticText
+        labelTipo.accessibilityTraits =
+        
+        
+        labelRate.accessibilityHint = "Informa o preço da moeda"
+        
+        
+//        @IBOutlet weak var viewButton: UIView!
+//        @IBOutlet weak var lastHour: UILabel!
+//        @IBOutlet weak var lastMonth: UILabel!
+//        @IBOutlet weak var lastDay: UILabel!
+//        @IBOutlet weak var buttonFavorito: UIButton!
+//        @IBOutlet weak var labelRate: UILabel!
+//        @IBOutlet weak var labelTipo: UILabel!
+//        @IBOutlet weak var buttonEstrela: UIButton!
+        
     }
 
 }
