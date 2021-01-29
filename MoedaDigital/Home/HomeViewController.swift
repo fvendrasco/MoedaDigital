@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
+        self.title = "Moeda Digital"
         super.viewDidLoad()
         viewModel.loadAPI()
         self.tabelaMoedas.dataSource = self

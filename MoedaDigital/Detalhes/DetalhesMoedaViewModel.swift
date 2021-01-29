@@ -10,13 +10,14 @@ import Foundation
 class DetalhesMoedaViewModel  {
     
     //MARK: - Properts
-    private var moedaFavorita = MoedaDAO().recuperaDadosDaMoeda()
+    private let moedaDAO: MoedaDAO
     var valorMoeda: MoedaViewData?
     var moedaSalva: Moeda?
     
-    init(valorMoeda: MoedaViewData?, moedaSalva: Moeda?) {
+    init(valorMoeda: MoedaViewData?, moedaSalva: Moeda?, moedaDAO: MoedaDAO = MoedaDAO()) {
         self.valorMoeda = valorMoeda
         self.moedaSalva = moedaSalva
+        self.moedaDAO = moedaDAO
     }
 
     
@@ -24,7 +25,7 @@ class DetalhesMoedaViewModel  {
     func montaDicionario() {
         var verifica = true
         if let valor = valorMoeda{
-            if MoedaDAO().verificaMoeda(valor.asset_id) == false {
+            if moedaDAO.verificaMoeda(valor.asset_id) == false {
                 verifica = false
                 let dicionario:Dictionary<String, String> = [
                     "name" : valor.name,
@@ -34,19 +35,19 @@ class DetalhesMoedaViewModel  {
                     "lastDay": valor.volume_1day_usd,
                     "LastMonth": valor.volume_1mth_usd,
                 ]
-                MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
+                moedaDAO.salvaMoeda(dicionarioDeMoeda: dicionario)
             } else {
-                MoedaDAO().deletaMoeda(moeda: valorMoeda, moedaSalva: moedaSalva)
+                moedaDAO.deletaMoeda(moeda: valorMoeda, moedaSalva: moedaSalva)
             }
         }  else {
-            MoedaDAO().deletaMoeda(moeda: valorMoeda, moedaSalva: moedaSalva)
+            moedaDAO.deletaMoeda(moeda: valorMoeda, moedaSalva: moedaSalva)
         }
     
     }
     
     func recuperaFavorito() -> Bool?{
         var moedaExiste = false
-        for moedas in moedaFavorita{
+        for moedas in moedaDAO.recuperaDadosDaMoeda(){
             if moedas.assetId == valorMoeda?.asset_id {
                moedaExiste = true
             } else if moedas.assetId == moedaSalva?.assetId{

@@ -11,6 +11,7 @@ class FavoritoViewController: UIViewController{
     
     @IBOutlet weak var labelData: UILabel!
     
+    
     init() {
         
         super.init(nibName: "FavoritoViewController", bundle: nil)
@@ -27,7 +28,6 @@ class FavoritoViewController: UIViewController{
             let nibName = UINib(nibName: "FavoritosCollectionViewCell", bundle: nil)
             collectionMoeda.register(nibName, forCellWithReuseIdentifier: "FavoritoCell")
             collectionMoeda.dataSource = self
-//            atualizaData()
         }
     }
     
@@ -36,20 +36,23 @@ class FavoritoViewController: UIViewController{
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
+        self.title = "Favoritos"
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
+        atualizaData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         collectionMoeda.reloadData()
     }
     
-//    func atualizaData(){
-//        let data = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd/MM/YYYY"
-//        labelData?.text = dateFormatter.string(from: data)
-//    }
+    func atualizaData(){
+        let data = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        print(dateFormatter.string(from: data))
+    labelData.text = dateFormatter.string(from: data)
+    }
 
 } //end
 
