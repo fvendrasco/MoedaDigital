@@ -20,7 +20,5 @@ class FavoritosCollectionViewCell: UICollectionViewCell {
         labelRate.text = listaMoedas.price
         labelType.text = listaMoedas.assetId
 
-        labelName.text = listaMoedas.name
-
     }
 }

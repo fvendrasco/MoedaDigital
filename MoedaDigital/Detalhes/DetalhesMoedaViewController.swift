@@ -41,6 +41,7 @@ class DetalhesMoedaViewController: UIViewController {
         viewButton.layer.masksToBounds = true
         moedaFavorita()
         setupAccessibility()
+        
     }
 
     //MARK: - Methods
@@ -82,29 +83,22 @@ class DetalhesMoedaViewController: UIViewController {
     func setupAccessibility(){
         labelRate.isAccessibilityElement = true
         labelTipo.isAccessibilityElement = true
-        viewButton.isAccessibilityElement = true
         lastDay.isAccessibilityElement = true
         buttonFavorito.isAccessibilityElement = true
         lastMonth.isAccessibilityElement = true
         lastHour.isAccessibilityElement = true
-        buttonEstrela.isAccessibilityElement = true
-        
         labelRate.accessibilityTraits = .staticText
-        labelTipo.accessibilityTraits =
-        
-        
+        labelTipo.accessibilityTraits = .staticText
+        buttonFavorito.accessibilityTraits = .button
+        lastDay.accessibilityTraits = .staticText
+        lastMonth.accessibilityTraits = .staticText
+        lastHour.accessibilityTraits = .staticText
         labelRate.accessibilityHint = "Informa o preço da moeda"
-        
-        
-//        @IBOutlet weak var viewButton: UIView!
-//        @IBOutlet weak var lastHour: UILabel!
-//        @IBOutlet weak var lastMonth: UILabel!
-//        @IBOutlet weak var lastDay: UILabel!
-//        @IBOutlet weak var buttonFavorito: UIButton!
-//        @IBOutlet weak var labelRate: UILabel!
-//        @IBOutlet weak var labelTipo: UILabel!
-//        @IBOutlet weak var buttonEstrela: UIButton!
-        
+        labelTipo.accessibilityHint = "Informa a sigla da moeda"
+        lastMonth.accessibilityHint = "Informa o valor da moeda no último mês"
+        lastDay.accessibilityHint = "Informa o valor da moeda no último mês"
+        lastHour.accessibilityHint = "Informa o valor da moeda na última hora"
+        buttonFavorito.accessibilityHint = "Adiciona a moeda aos Favoritos"
     }
 
 }
