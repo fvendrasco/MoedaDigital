@@ -12,7 +12,7 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet weak var lastHour: UILabel!
     @IBOutlet weak var lastMonth: UILabel!
-    @IBOutlet weak var lastYear: UILabel!
+    @IBOutlet weak var lastDay: UILabel!
     @IBOutlet weak var buttonFavorito: UIButton!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
@@ -45,18 +45,18 @@ class DetalhesMoedaViewController: UIViewController {
     func configura(){
         if viewModel?.valorMoeda != nil {
             guard let valor = viewModel?.valorMoeda else {return}
-            labelTipo.text =  valor.assetIDQuote
-            labelRate.text = valor.rate
-            lastHour.text = valor.time
-            lastMonth.text = valor.time
-            lastYear.text = valor.time
+            labelTipo.text =  valor.asset_id
+            labelRate.text = valor.price_usd
+            lastHour.text = valor.volume_1hrs_usd
+            lastMonth.text = valor.volume_1mth_usd
+            lastDay.text = valor.volume_1day_usd
         } else {
             guard let valor = viewModel?.moedaSalva else {return}
-            labelTipo.text =  valor.assetIDQuote
-            labelRate.text = valor.rate
-            lastHour.text = valor.time
-            lastMonth.text = valor.time
-            lastYear.text = valor.time
+            labelTipo.text =  valor.assetId
+            labelRate.text = valor.price
+            lastHour.text = valor.volumeHour
+            lastMonth.text = valor.volumeMonth
+            lastDay.text = valor.volumeDay
         }
         
     }

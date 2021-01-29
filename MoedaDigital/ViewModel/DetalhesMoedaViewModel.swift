@@ -24,12 +24,14 @@ class DetalhesMoedaViewModel  {
     func montaDicionario() {
         var verifica = true
         if let valor = valorMoeda{
-            if MoedaDAO().verificaMoeda(valor.assetIDQuote) == false {
+            if MoedaDAO().verificaMoeda(valor.asset_id) == false {
                 verifica = false
                 let dicionario:Dictionary<String, String> = [
-                    "assetIDQuote": valor.assetIDQuote,
-                    "rate": valor.rate,
-                    "time": valor.time,
+                    "assetId": valor.asset_id,
+                    "price_usd": valor.price_usd,
+                    "lastHour": valor.volume_1hrs_usd,
+                    "lastDay": valor.volume_1day_usd,
+                    "LastMonth": valor.volume_1mth_usd,
                 ]
                 MoedaDAO().salvaMoeda(dicionarioDeMoeda: dicionario)
             } else {
@@ -44,9 +46,9 @@ class DetalhesMoedaViewModel  {
     func recuperaFavorito() -> Bool?{
         var moedaExiste = false
         for moedas in moedaFavorita{
-            if moedas.assetIDQuote == valorMoeda?.assetIDQuote {
+            if moedas.assetId == valorMoeda?.asset_id {
                moedaExiste = true
-            } else if moedas.assetIDQuote == moedaSalva?.assetIDQuote{
+            } else if moedas.assetId == moedaSalva?.assetId{
                 moedaExiste = true
             }
         }

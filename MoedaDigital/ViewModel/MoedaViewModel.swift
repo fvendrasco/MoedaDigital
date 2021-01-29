@@ -18,15 +18,15 @@ class MoedaViewModel: RespostaAPI  {
     func success(modelo: ModeloMoeda) {
         listaDeValores = modelo
         
-        for moedas in modelo.rates{
-            moedaData.append(MoedaViewData(model: moedas))
+        for moeda in modelo {
+            moedaData.append(MoedaViewData(model: moeda))
         }
     }
     
     func failure() {
         print("falhou aqui")
     }
-    
+
 } //end
 
 
