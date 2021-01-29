@@ -13,7 +13,6 @@
 		5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */; };
 		5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */; };
 		5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */; };
-		5F49F64E25C434C000F72CE5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5F49F64D25C434C000F72CE5 /* .swiftlint.yml */; };
 		5FADF22F25BF2969003DB6AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */; };
 		5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */; };
 		5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC54525B9C5BA00F07700 /* AppDelegate.swift */; };
@@ -44,6 +43,20 @@
 		F520E6F1B3A18C507615B8AE /* Pods_MoedaDigital_MoedaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		ABC7DB9E25C435F500A4F802 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.metal;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# metal\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		5FECC55C25B9C5BE00F07700 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,7 +83,6 @@
 		5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoViewController.swift; sourceTree = "<group>"; };
 		5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritoViewController.xib; sourceTree = "<group>"; };
-		5F49F64D25C434C000F72CE5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		5FECC54225B9C5BA00F07700 /* MoedaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoedaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +238,6 @@
 				F11D164525BA0C090046C5A9 /* Service */,
 				F11D164E25BA0C280046C5A9 /* Application */,
 				F17337BE25BE0CEC00D007BD /* Resources */,
-				5F49F64D25C434C000F72CE5 /* .swiftlint.yml */,
 			);
 			path = MoedaDigital;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 				5F49F64025C4322900F72CE5 /* ShellScript */,
 			);
 			buildRules = (
+				ABC7DB9E25C435F500A4F802 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -439,7 +451,6 @@
 				ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */,
 				F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
-				5F49F64E25C434C000F72CE5 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +564,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 		B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
