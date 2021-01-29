@@ -29,7 +29,9 @@
                         <viewLayoutGuide key="safeArea" id="jmZ-S6-CkR"/>
                         <color key="backgroundColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="dollarsign.circle" catalog="system" id="25G-yu-mlx"/>
+                    <tabBarItem key="tabBarItem" selectedImage="dollarsign.circle" catalog="system" id="25G-yu-mlx">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <viewController nibName="" id="jey-gY-qFJ" userLabel="Favoritos" customClass="TabBarViewController" customModule="MoedaDigital" customModuleProvider="target">
                     <view key="view" contentMode="scaleToFill" id="mfU-GA-hSl">
@@ -38,7 +40,9 @@
                         <viewLayoutGuide key="safeArea" id="kvf-kO-Mqe"/>
                         <color key="backgroundColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="1Qi-wP-wjR"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="1Qi-wP-wjR">
+                        <color key="badgeColor" red="0.1743337563" green="0.1743337563" blue="0.1743337563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewController>
             </viewControllers>
             <point key="canvasLocation" x="-63" y="-50"/>

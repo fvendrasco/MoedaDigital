@@ -8,31 +8,48 @@
 import UIKit
 
 class FavoritoViewController: UIViewController{
-//    
-//    init() {
-//        
-//        super.init(nibName: "FavoritoViewController", bundle: nil)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    
+    @IBOutlet weak var labelData: UILabel!
+    
+    init() {
+        
+        super.init(nibName: "FavoritoViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - IBOutlet
-    @IBOutlet weak var collectionMoeda: UICollectionView!
+    
+    @IBOutlet weak var collectionMoeda: UICollectionView! {
+        didSet {
+            let nibName = UINib(nibName: "FavoritosCollectionViewCell", bundle: nil)
+            collectionMoeda.register(nibName, forCellWithReuseIdentifier: "FavoritoCell")
+            collectionMoeda.dataSource = self
+//            atualizaData()
+        }
+    }
     
     //MARK: - Properts
     var viewModel: FavoritosViewModel = FavoritosViewModel()
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
-//        collectionMoeda.dataSource = self
-  //      collectionMoeda.delegate = self
+        collectionMoeda.dataSource = self
+        collectionMoeda.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    //    collectionMoeda.reloadData()
+        collectionMoeda.reloadData()
     }
+    
+//    func atualizaData(){
+//        let data = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd/MM/YYYY"
+//        labelData?.text = dateFormatter.string(from: data)
+//    }
 
 } //end
 
@@ -42,7 +59,7 @@ extension FavoritoViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let celulaFavoritos = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFavoritos", for: indexPath)as! FavoritosCollectionViewCell
+        let celulaFavoritos = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritoCell", for: indexPath)as! FavoritosCollectionViewCell
         
         let valorMoeda = viewModel.recuperaFavoritos()[indexPath.row]
         
