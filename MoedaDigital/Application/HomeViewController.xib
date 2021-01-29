@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
-                <outlet property="dateHomeView" destination="CBb-eA-wnX" id="ZCn-2m-FeD"/>
+                <outlet property="labelDataTelaPrincipal" destination="CBb-eA-wnX" id="cr1-Kg-kf2"/>
+                <outlet property="pesquisaMoeda" destination="J6v-Ln-QI4" id="ZLI-p2-uhi"/>
+                <outlet property="tabelaMoedas" destination="TDn-tG-ZGn" id="veo-dC-bhy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,16 +43,27 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDn-tG-ZGn">
+                            <rect key="frame" x="0.0" y="170" width="375" height="447"/>
+                            <color key="backgroundColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="separatorColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" red="0.1028401032" green="0.098229952159999995" blue="0.10349812360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="ZaO-n6-xcr" firstAttribute="top" secondItem="qP7-rq-ddD" secondAttribute="top" constant="40" id="5bZ-D6-om5"/>
                         <constraint firstAttribute="trailing" secondItem="ZaO-n6-xcr" secondAttribute="trailing" id="8Pf-uu-oKs"/>
+                        <constraint firstAttribute="bottom" secondItem="TDn-tG-ZGn" secondAttribute="bottom" constant="50" id="P0M-if-cBi"/>
+                        <constraint firstItem="TDn-tG-ZGn" firstAttribute="top" secondItem="J6v-Ln-QI4" secondAttribute="bottom" constant="1" id="VgT-JA-NbS"/>
                         <constraint firstAttribute="trailing" secondItem="J6v-Ln-QI4" secondAttribute="trailing" id="eFC-es-hoK"/>
                         <constraint firstItem="CBb-eA-wnX" firstAttribute="top" secondItem="ZaO-n6-xcr" secondAttribute="bottom" constant="8" symbolic="YES" id="j0O-Bq-f0L"/>
                         <constraint firstItem="J6v-Ln-QI4" firstAttribute="top" secondItem="CBb-eA-wnX" secondAttribute="bottom" constant="20" id="jmQ-yD-cdI"/>
+                        <constraint firstItem="TDn-tG-ZGn" firstAttribute="leading" secondItem="qP7-rq-ddD" secondAttribute="leading" id="lg5-l4-gFa"/>
                         <constraint firstItem="ZaO-n6-xcr" firstAttribute="leading" secondItem="qP7-rq-ddD" secondAttribute="leading" id="rbe-tL-VPD"/>
                         <constraint firstItem="J6v-Ln-QI4" firstAttribute="leading" secondItem="qP7-rq-ddD" secondAttribute="leading" id="ucJ-cn-rN2"/>
+                        <constraint firstAttribute="trailing" secondItem="TDn-tG-ZGn" secondAttribute="trailing" id="yLn-fj-R4C"/>
                     </constraints>
                 </view>
             </subviews>
@@ -62,7 +75,7 @@
                 <constraint firstItem="qP7-rq-ddD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VpD-aw-Z9P"/>
                 <constraint firstItem="qP7-rq-ddD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="knY-Bj-Y44"/>
             </constraints>
-            <point key="canvasLocation" x="74" y="85"/>
+            <point key="canvasLocation" x="72.799999999999997" y="84.107946026986511"/>
         </view>
     </objects>
 </document>

@@ -9,14 +9,18 @@ import UIKit
 
 class FavoritosCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelType: UILabel!
-    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelImage: UIImageView!
+
     
     
     func configuraCelulaFavoritos(_ listaMoedas: Moeda){
         labelRate.text = listaMoedas.price
         labelType.text = listaMoedas.assetId
+
         labelName.text = listaMoedas.name
+
     }
 }
