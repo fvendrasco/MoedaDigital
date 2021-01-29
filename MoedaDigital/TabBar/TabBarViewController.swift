@@ -7,7 +7,11 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    
+    // MARK: IBOutlet
+    @IBOutlet weak var tabBarFavoritos: UITabBar!
+    
+    // MARK: IBOutlet
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarMoedas()
@@ -43,10 +47,10 @@ class TabBarViewController: UITabBarController {
         }
     }
     
+    // MARK: Acessibilidade
     func setupAccessibility(){
-        tabBar.isAccessibilityElement = true
-        tabBar.accessibilityTraits = .button
-        
+        tabBarFavoritos.isAccessibilityElement = true
+        tabBarFavoritos.accessibilityLabel = "Nesta barra de abas, você pode acessar o menu das Moedas ou de Favoritos"
     }
 }
 

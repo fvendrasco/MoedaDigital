@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         self.tabelaMoedas.delegate = self
         pesquisaMoeda.delegate = self
         atualizaData()
+        setupAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +74,17 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: Accessibility
+    func setupAccessibility(){
+        tabelaMoedas.isAccessibilityElement = true
+        labelDataTelaPrincipal.isAccessibilityElement = true
+        pesquisaMoeda.isAccessibilityElement = true
+        
+        tabelaMoedas.accessibilityLabel = "Esta tabela traz os dados das Moedas, os dados são nome, imagem, sigla e valor"
+        labelDataTelaPrincipal.accessibilityLabel = "Este campo apresentada a data de hoje"
+        pesquisaMoeda.accessibilityLabel = "Informe o nome da moeda que deseja buscar"
+        
+    }
     
 } //end
 

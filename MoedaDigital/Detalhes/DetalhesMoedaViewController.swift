@@ -17,8 +17,9 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
+    @IBOutlet weak var viewCabecalho: UIView!
+    @IBOutlet weak var viewCorpoTela: UIView!
     
-
     //MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
     
@@ -70,6 +71,25 @@ class DetalhesMoedaViewController: UIViewController {
             buttonFavorito.setTitle("remover", for: .normal)
         }
     }
+    
+    // MARK: Accessibilidade
+    func setupAccessibility(){
+        labelRate.isAccessibilityElement = true
+        labelTipo.isAccessibilityElement = true
+        lastMonth.isAccessibilityElement = true
+        lastHour.isAccessibilityElement = true
+        buttonFavorito.isAccessibilityElement = true
+        viewCabecalho.isAccessibilityElement = true
+        viewCorpoTela.isAccessibilityElement = true
+        viewCabecalho.accessibilityLabel = "Neste espaço está contido a imagem da moeda, sua sigla e seu valor atual e o botão para adicionar aos favoritos"
+        viewCorpoTela.accessibilityLabel = "Neste espaço está contido os valores da moeda selecionada na última hora, último mês e último ano"
+        labelRate.accessibilityLabel = "Informa o preço da moeda"
+        labelTipo.accessibilityLabel = "Informa a sigla da moeda"
+        lastMonth.accessibilityLabel = "Informa o valor da moeda no último mês"
+        lastDay.accessibilityLabel = "Informa o valor da moeda no último mês"
+        lastHour.accessibilityLabel = "Informa o valor da moeda na última hora"
+        buttonFavorito.accessibilityLabel = "Adiciona a moeda aos Favoritos"
+    }
 
     //MARK: - IBAction
     @IBAction func estadoMoeda(_ sender: Any) {
@@ -80,25 +100,6 @@ class DetalhesMoedaViewController: UIViewController {
         }
     }
     
-    func setupAccessibility(){
-        labelRate.isAccessibilityElement = true
-        labelTipo.isAccessibilityElement = true
-        lastDay.isAccessibilityElement = true
-        buttonFavorito.isAccessibilityElement = true
-        lastMonth.isAccessibilityElement = true
-        lastHour.isAccessibilityElement = true
-        labelRate.accessibilityTraits = .staticText
-        labelTipo.accessibilityTraits = .staticText
-        buttonFavorito.accessibilityTraits = .button
-        lastDay.accessibilityTraits = .staticText
-        lastMonth.accessibilityTraits = .staticText
-        lastHour.accessibilityTraits = .staticText
-        labelRate.accessibilityHint = "Informa o preço da moeda"
-        labelTipo.accessibilityHint = "Informa a sigla da moeda"
-        lastMonth.accessibilityHint = "Informa o valor da moeda no último mês"
-        lastDay.accessibilityHint = "Informa o valor da moeda no último mês"
-        lastHour.accessibilityHint = "Informa o valor da moeda na última hora"
-        buttonFavorito.accessibilityHint = "Adiciona a moeda aos Favoritos"
-    }
+    
 
 }

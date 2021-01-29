@@ -17,7 +17,7 @@ class FavoritosCollectionViewCell: UICollectionViewCell {
     func configuraCelulaFavoritos(_ listaMoedas: Moeda){
         labelRate.text = listaMoedas.price
         labelType.text = listaMoedas.assetId
-        labelName.text = listaMoedas.name
+//        labelName.text = listaMoedas.name
 
 
     }

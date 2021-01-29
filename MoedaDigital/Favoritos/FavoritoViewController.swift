@@ -38,6 +38,7 @@ class FavoritoViewController: UIViewController{
     override func viewDidLoad() {
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
+        setupAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +67,12 @@ extension FavoritoViewController: UICollectionViewDataSource{
         celulaFavoritos.configuraCelulaFavoritos(valorMoeda)
         
         return celulaFavoritos
+    }
+    
+    // MARK: Acessibilidade
+    func setupAccessibility(){
+        collectionMoeda.isAccessibilityElement = true
+        collectionMoeda.accessibilityLabel = "Neste espaço estão contidos todos os itens que foram favoritados anteriormente"
     }
 }
 

@@ -20,6 +20,8 @@
                 <outlet property="lastMonth" destination="aZi-KZ-YXN" id="fGY-GV-dec"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewButton" destination="nWu-IS-9Qy" id="zNR-69-L7o"/>
+                <outlet property="viewCabecalho" destination="poD-Qr-Fzm" id="24f-sn-oHb"/>
+                <outlet property="viewCorpoTela" destination="lj2-Sz-KqR" id="ITJ-Zq-evt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

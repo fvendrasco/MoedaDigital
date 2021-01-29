@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         self.tabelaMoedas.delegate = self
         pesquisaMoeda.delegate = self
         atualizaData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
