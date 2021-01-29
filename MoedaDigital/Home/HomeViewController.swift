@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     init() {
         
-        super.init(nibName: HomeViewController.description(), bundle: nil)
+        super.init(nibName: "HomeViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {

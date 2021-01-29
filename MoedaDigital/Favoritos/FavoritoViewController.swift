@@ -8,6 +8,16 @@
 import UIKit
 
 class FavoritoViewController: UIViewController{
+    
+    init() {
+        
+        super.init(nibName: "FavoritoViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: - IBOutlet
     @IBOutlet weak var collectionMoeda: UICollectionView!
     
