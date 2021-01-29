@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetalhesMoedaViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
-                <outlet property="buttonEstrela" destination="Bb8-zv-gkG" id="eIC-O2-PD9"/>
                 <outlet property="buttonFavorito" destination="wx1-QZ-R9T" id="qGN-aJ-3eH"/>
+                <outlet property="labelEstrela" destination="2qd-Z4-zuK" id="NxT-WU-2xT"/>
                 <outlet property="labelRate" destination="uK7-OT-iqd" id="Zwf-Qt-63H"/>
                 <outlet property="labelTipo" destination="Vmo-WZ-8nH" id="PbQ-YL-BPg"/>
                 <outlet property="lastDay" destination="989-Tl-wBE" id="g20-Le-1Uz"/>
@@ -77,21 +77,24 @@
                                 <constraint firstAttribute="trailing" secondItem="wx1-QZ-R9T" secondAttribute="trailing" constant="6" id="u9O-gV-PfD"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Bb8-zv-gkG">
-                            <rect key="frame" x="246" y="80" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-Z4-zuK">
+                            <rect key="frame" x="309" y="68" width="42" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.55603402850000005" green="0.58895039559999995" blue="0.39604237679999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2qd-Z4-zuK" secondAttribute="trailing" constant="64" id="9cO-Vl-wXW"/>
                         <constraint firstItem="uK7-OT-iqd" firstAttribute="leading" secondItem="poD-Qr-Fzm" secondAttribute="leading" constant="8" id="EDN-Mq-GKO"/>
                         <constraint firstItem="Vmo-WZ-8nH" firstAttribute="leading" secondItem="poD-Qr-Fzm" secondAttribute="leading" constant="8" id="Gvz-kU-xNq"/>
                         <constraint firstItem="uK7-OT-iqd" firstAttribute="top" secondItem="s1d-pM-Fzh" secondAttribute="bottom" constant="8" id="K2k-rO-v1B"/>
                         <constraint firstItem="s1d-pM-Fzh" firstAttribute="centerX" secondItem="poD-Qr-Fzm" secondAttribute="centerX" id="Kan-TO-5pZ"/>
                         <constraint firstAttribute="trailing" secondItem="nWu-IS-9Qy" secondAttribute="trailing" constant="54" id="WS0-S3-AqG"/>
                         <constraint firstAttribute="bottom" secondItem="nWu-IS-9Qy" secondAttribute="bottom" constant="36" id="WVj-i9-HOu"/>
+                        <constraint firstItem="2qd-Z4-zuK" firstAttribute="top" secondItem="poD-Qr-Fzm" secondAttribute="top" constant="68" id="XUA-6p-pDr"/>
                         <constraint firstAttribute="height" constant="277" id="YEC-xR-PMP"/>
-                        <constraint firstItem="Bb8-zv-gkG" firstAttribute="top" secondItem="poD-Qr-Fzm" secondAttribute="top" constant="80" id="ZIV-Tr-8NK"/>
                         <constraint firstItem="nWu-IS-9Qy" firstAttribute="top" secondItem="uK7-OT-iqd" secondAttribute="bottom" constant="31" id="bAA-Oi-dKk"/>
                         <constraint firstAttribute="trailing" secondItem="Vmo-WZ-8nH" secondAttribute="trailing" constant="8" id="bVx-xh-dGs"/>
                         <constraint firstItem="Vmo-WZ-8nH" firstAttribute="top" secondItem="poD-Qr-Fzm" secondAttribute="top" constant="51" id="c6S-U3-Kl7"/>
