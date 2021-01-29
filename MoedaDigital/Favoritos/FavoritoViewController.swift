@@ -26,12 +26,12 @@ class FavoritoViewController: UIViewController{
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
-        collectionMoeda.dataSource = self
-        collectionMoeda.delegate = self
+//        collectionMoeda.dataSource = self
+  //      collectionMoeda.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionMoeda.reloadData()
+    //    collectionMoeda.reloadData()
     }
 
 } //end
