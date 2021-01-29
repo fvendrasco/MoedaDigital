@@ -143,7 +143,8 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="labelEstrela" destination="P7P-Hx-k8z" id="zsM-9a-t1s"/>
-                                            <outlet property="labelNome" destination="sCJ-TP-INb" id="Rwl-qt-HdR"/>
+                                            <outlet property="labelId" destination="sCJ-TP-INb" id="Rwl-qt-HdR"/>
+                                            <outlet property="labelName" destination="gz1-WK-sKj" id="4vI-eS-haW"/>
                                             <outlet property="labelRate" destination="TWP-jv-pWQ" id="5rw-lR-EUc"/>
                                         </connections>
                                     </tableViewCell>
@@ -182,7 +183,7 @@
             <objects>
                 <navigationController id="jfv-e6-sSC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="crown.fill" catalog="system" id="Rjj-m2-h9b"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u7I-T3-wcy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="u7I-T3-wcy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,17 +211,17 @@
             <objects>
                 <viewController title="A" id="BOZ-Lc-idU" customClass="FavoritoViewController" customModule="MoedaDigital" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMb-gX-Chp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-8H-P6z">
-                                <rect key="frame" x="16" y="44" width="288" height="22"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Lk-Sa-I2J">
-                                <rect key="frame" x="16" y="74" width="288" height="445"/>
+                                <rect key="frame" x="16" y="30" width="288" height="445"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wxG-pW-tri">
                                     <size key="itemSize" width="134" height="128"/>
