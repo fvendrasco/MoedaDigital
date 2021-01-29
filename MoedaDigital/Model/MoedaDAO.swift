@@ -19,7 +19,7 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
     
     func recuperaDadosDaMoeda() -> Array<Moeda> {
         let pesquisaMoeda: NSFetchRequest<Moeda> = Moeda.fetchRequest()
-        let ordenaPorNome = NSSortDescriptor(key: "assetIDQuote", ascending: true)
+        let ordenaPorNome = NSSortDescriptor(key: "assetId", ascending: true)
         pesquisaMoeda.sortDescriptors = [ordenaPorNome]
         gerenciadorDeResultados = NSFetchedResultsController(fetchRequest: pesquisaMoeda, managedObjectContext: contexto, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -47,9 +47,9 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
         var moeda:NSManagedObject?
         
         
-         let id = (dicionarioDeMoeda["assetIDQuote"] as! String)
+         let id = (dicionarioDeMoeda["assetId"] as! String)
         
-        let moedas = recuperaDadosDaMoeda().filter(){ $0.assetIDQuote  == id }
+        let moedas = recuperaDadosDaMoeda().filter(){ $0.assetId  == id }
 
         if moedas.count > 0{
             guard let moedaSelecionada = moedas.first else {return}
@@ -61,19 +61,22 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
         }
         
 
-        moeda?.setValue(dicionarioDeMoeda["assetIDQuote"] as? String, forKey: "assetIDQuote")
-        moeda?.setValue(dicionarioDeMoeda["time"] as? String, forKey: "time")
-        moeda?.setValue(dicionarioDeMoeda["rate"] as? String, forKey: "rate")
+        moeda?.setValue(dicionarioDeMoeda["assetId"] as? String, forKey: "assetId")
+        moeda?.setValue(dicionarioDeMoeda["LastMonth"] as? String, forKey: "volumeMonth")
+        moeda?.setValue(dicionarioDeMoeda["lastHour"] as? String, forKey: "volumeHour")
+        moeda?.setValue(dicionarioDeMoeda["lastDay"] as? String, forKey: "volumeDay")
+        moeda?.setValue(dicionarioDeMoeda["price_usd"] as? String, forKey: "price")
+        
         
         atualizaContexto()
     }
     
     func deletaMoeda(moeda:MoedaViewData?, moedaSalva: Moeda?){
         for listaDeMoedas in recuperaDadosDaMoeda(){
-            if listaDeMoedas.assetIDQuote == moeda?.assetIDQuote {
+            if listaDeMoedas.assetId == moeda?.asset_id {
                 contexto.delete(listaDeMoedas)
                 atualizaContexto()
-            } else if listaDeMoedas.assetIDQuote == moedaSalva?.assetIDQuote {
+            } else if listaDeMoedas.assetId == moedaSalva?.assetId {
                 contexto.delete(listaDeMoedas)
                 atualizaContexto()
             }
@@ -83,7 +86,7 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
     func verificaMoeda(_ nome: String) -> Bool {
         var moedaExiste = false
         for listaDeMoedas in recuperaDadosDaMoeda(){
-            if listaDeMoedas.assetIDQuote == nome {
+            if listaDeMoedas.assetId == nome {
                moedaExiste = true
             }
         }

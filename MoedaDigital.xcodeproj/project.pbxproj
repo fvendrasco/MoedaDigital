@@ -29,7 +29,7 @@
 		ABAAE73325BF57C00093AE21 /* ErrorScreenUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */; };
 		E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */; };
 		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
-		F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */; };
+		F11D165825BA0CD60046C5A9 /* ModeloMoedaElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */; };
 		F11D167225BA0E810046C5A9 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */; };
 		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
 		F1855C5825BB038D0029CBFA /* MoedaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */; };
@@ -95,7 +95,7 @@
 		B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital_MoedaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
 		F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaAPI.swift; sourceTree = "<group>"; };
-		F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoeda.swift; sourceTree = "<group>"; };
+		F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloMoedaElement.swift; sourceTree = "<group>"; };
 		F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
 		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
 		F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewCell.swift; sourceTree = "<group>"; };
@@ -254,10 +254,7 @@
 				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
 				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
-
-
 				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
-
 				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
 				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
 				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
@@ -269,8 +266,7 @@
 		F11D165625BA0CCB0046C5A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F11D165725BA0CD60046C5A9 /* ModeloMoeda.swift */,
-				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
+				F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */,
 				F1F2A46E25C0551900D55FAF /* MoedaDAO.swift */,
 				AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */,
 			);
@@ -552,7 +548,7 @@
 				F1A626B925C1958B009952F7 /* FavoritosViewModel.swift in Sources */,
 				F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */,
 				F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */,
-				F11D165825BA0CD60046C5A9 /* ModeloMoeda.swift in Sources */,
+				F11D165825BA0CD60046C5A9 /* ModeloMoedaElement.swift in Sources */,
 				5FECC55025B9C5BA00F07700 /* MoedaDigital.xcdatamodeld in Sources */,
 				F1A626CD25C19EC9009952F7 /* FavoritosCollectionViewCell.swift in Sources */,
 				5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */,

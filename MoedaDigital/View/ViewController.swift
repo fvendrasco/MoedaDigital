@@ -64,7 +64,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return listaMoeda.count
+        return viewModel.moedaData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,7 +97,7 @@ extension ViewController: UISearchBarDelegate {
         listaMoeda = viewModel.moedaData
         
         if searchText != ""{
-            listaMoeda = listaMoeda.filter({ $0.assetIDQuote.contains(searchText) })
+            listaMoeda = listaMoeda.filter({ $0.asset_id.contains(searchText) })
         }
         atualizaTabela()
     }

@@ -44,6 +44,7 @@
             </viewControllers>
             <point key="canvasLocation" x="-63" y="-50"/>
         </tabBarController>
+        <tabBarItem title="Item" id="2Mz-IR-ag5"/>
     </objects>
     <resources>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>

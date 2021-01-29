@@ -27,23 +27,24 @@ class MoedaAPI: NSObject, MoedasProtocolo{
     }
     
     func recebeMoeda(){
-        guard let url = URL(string: "https://rest.coinapi.io/v1/exchangerate/BTC?apikey=176BDEED-E962-4E3F-9F50-E6295843D003") else {return}
+        guard let url = URL(string: "https://rest.coinapi.io/v1/assets?apikey=176BDEED-E962-4E3F-9F50-E6295843D003") else {return}
         Alamofire.request(url, method: .get).responseJSON { (response) in
             
             switch response.result {
             
             case .success:
                 
-                if(response.result.value as? [String: Any]) != nil{
+//                if(response.result.value as? [Any: Any]) != nil{
                     do{
                         guard let data = response.data else {return}
                         let objetoMoeda = try JSONDecoder().decode(ModeloMoeda.self, from: data)
                         self.delegate?.success(modelo: objetoMoeda)
                         
-                    } catch {
+                    } catch let erro {
+                        print(erro)
                         print("falhou aqui")
                     }
-                }
+//                }
                 break
             case .failure:
                 print(response.error!)
