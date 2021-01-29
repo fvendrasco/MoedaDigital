@@ -11,6 +11,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarMoedas()
+        setupAccessibility()
     }
     
 
@@ -40,6 +41,12 @@ class TabBarViewController: UITabBarController {
         for item in items{
             item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
         }
+    }
+    
+    func setupAccessibility(){
+        tabBar.isAccessibilityElement = true
+        tabBar.accessibilityTraits = .button
+        
     }
 }
 
