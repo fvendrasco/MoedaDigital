@@ -12,7 +12,8 @@
 		5F15BF3C25BB6235005BAAF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */; };
 		5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */; };
 		5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */; };
-		5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */; };
+		5F49F66D25C444D200F72CE5 /* FavoritoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F49F66C25C444D200F72CE5 /* FavoritoViewController.xib */; };
+		5F49F67825C44CA600F72CE5 /* FavoritosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F49F67725C44CA600F72CE5 /* FavoritosCollectionViewCell.xib */; };
 		5FADF22F25BF2969003DB6AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */; };
 		5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */; };
 		5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC54525B9C5BA00F07700 /* AppDelegate.swift */; };
@@ -82,7 +83,8 @@
 		5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoViewController.swift; sourceTree = "<group>"; };
-		5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritoViewController.xib; sourceTree = "<group>"; };
+		5F49F66C25C444D200F72CE5 /* FavoritoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritoViewController.xib; sourceTree = "<group>"; };
+		5F49F67725C44CA600F72CE5 /* FavoritosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritosCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		5FECC54225B9C5BA00F07700 /* MoedaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoedaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,7 +286,8 @@
 				5FECC54B25B9C5BA00F07700 /* Main.storyboard */,
 				5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */,
 				5F15BF2F25BB4E58005BAAF7 /* HomeTableViewCell.xib */,
-				5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */,
+				5F49F66C25C444D200F72CE5 /* FavoritoViewController.xib */,
+				5F49F67725C44CA600F72CE5 /* FavoritosCollectionViewCell.xib */,
 				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
 				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
@@ -443,13 +446,14 @@
 			files = (
 				5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */,
 				5FECC55525B9C5BE00F07700 /* LaunchScreen.storyboard in Resources */,
-				5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */,
 				5FECC55225B9C5BE00F07700 /* Assets.xcassets in Resources */,
 				5F15BF3125BB4E58005BAAF7 /* HomeTableViewCell.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
 				5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */,
 				ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */,
+				5F49F67825C44CA600F72CE5 /* FavoritosCollectionViewCell.xib in Resources */,
 				F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */,
+				5F49F66D25C444D200F72CE5 /* FavoritoViewController.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
