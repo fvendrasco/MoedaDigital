@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritoViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
                 <outlet property="collectionMoeda" destination="dzd-ej-BZn" id="NIC-Xb-S0k"/>
-                <outlet property="labelData" destination="V8f-tB-bNC" id="RfF-vP-fWZ"/>
+                <outlet property="labelData" destination="V8f-tB-bNC" id="cSO-8j-g2w"/>
                 <outlet property="view" destination="v6p-qf-UWj" id="A6k-f2-9gJ"/>
             </connections>
         </placeholder>

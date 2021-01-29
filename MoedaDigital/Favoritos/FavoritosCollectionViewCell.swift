@@ -19,6 +19,5 @@ class FavoritosCollectionViewCell: UICollectionViewCell {
         labelType.text = listaMoedas.assetId
 //        labelName.text = listaMoedas.name
 
-
     }
 }

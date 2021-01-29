@@ -14,6 +14,7 @@ class TabBarViewController: UITabBarController {
     // MARK: IBOutlet
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.barTintColor = .black
         tabBarMoedas()
         setupAccessibility()
     }
@@ -23,19 +24,26 @@ class TabBarViewController: UITabBarController {
  
         //MARK: - TabBar Moedas
         let moedaViewController = UINavigationController(rootViewController: HomeViewController())
-        moedaViewController.title = "Moedas"
-        moedaViewController.tabBarItem.image = UIImage(named: "Coin")
-        moedaViewController.tabBarItem.selectedImage = UIImage(named: "CoinPress")
+        moedaViewController.navigationBar.barStyle = UIBarStyle.black
+        moedaViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        moedaViewController.navigationBar.tintColor = .white
+        if #available(iOS 13.0, *) {
+            moedaViewController.tabBarItem.image = UIImage(systemName: "dollarsign.circle")
+            moedaViewController.tabBarItem.selectedImage = UIImage(systemName: "dollarsign.circle.fill")
+        }
+
     
         
         //MARK: - TabBar Favoritos
         let favoritoViewController = UINavigationController(rootViewController: FavoritoViewController())
-        
+        favoritoViewController.navigationBar.barStyle = UIBarStyle.black
+        favoritoViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         let item = UITabBarItem()
-        
-        item.title = "Favoritos"
-        item.image = UIImage(named: "Favorite")
-        item.selectedImage = UIImage(named: "FavoritePress")
+        item.title = "Adicionadas"
+        if #available(iOS 13.0, *) {
+            item.image = UIImage(systemName: "star")
+            item.selectedImage = UIImage(systemName: "star.fill")
+        }
         favoritoViewController.tabBarItem = item
             
         viewControllers = [moedaViewController, favoritoViewController]
