@@ -13,6 +13,7 @@
 		5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */; };
 		5F15BF4325BB6251005BAAF7 /* FavoritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */; };
 		5F15BF4425BB6251005BAAF7 /* FavoritoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */; };
+		5F49F64E25C434C000F72CE5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5F49F64D25C434C000F72CE5 /* .swiftlint.yml */; };
 		5FADF22F25BF2969003DB6AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */; };
 		5FADF23025BF2969003DB6AE /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */; };
 		5FECC54625B9C5BA00F07700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC54525B9C5BA00F07700 /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		5F15BF3B25BB6235005BAAF7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoViewController.swift; sourceTree = "<group>"; };
 		5F15BF4225BB6251005BAAF7 /* FavoritoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritoViewController.xib; sourceTree = "<group>"; };
+		5F49F64D25C434C000F72CE5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5FADF22E25BF2969003DB6AE /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		5FECC54225B9C5BA00F07700 /* MoedaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoedaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5F49F64A25C4337700F72CE5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
+				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
+				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
+				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
+				F1A626F425C1D9E0009952F7 /* MoedaViewCellModel.swift */,
+				F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */,
+				F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F49F64B25C433D200F72CE5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		5F49F64C25C433F100F72CE5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		5FECC53925B9C5BA00F07700 = {
 			isa = PBXGroup;
 			children = (
@@ -185,12 +217,16 @@
 		5FECC54425B9C5BA00F07700 /* MoedaDigital */ = {
 			isa = PBXGroup;
 			children = (
-				F11D167025BA0E710046C5A9 /* ViewModel */,
-				F11D164F25BA0C4C0046C5A9 /* View */,
+				5F49F64C25C433F100F72CE5 /* TabBar */,
+				5F49F64B25C433D200F72CE5 /* Error */,
+				5F49F64A25C4337700F72CE5 /* Home */,
+				F11D167025BA0E710046C5A9 /* Detalhes */,
+				F11D164F25BA0C4C0046C5A9 /* Favoritos */,
 				F11D165625BA0CCB0046C5A9 /* Model */,
 				F11D164525BA0C090046C5A9 /* Service */,
 				F11D164E25BA0C280046C5A9 /* Application */,
 				F17337BE25BE0CEC00D007BD /* Resources */,
+				5F49F64D25C434C000F72CE5 /* .swiftlint.yml */,
 			);
 			path = MoedaDigital;
 			sourceTree = "<group>";
@@ -246,21 +282,14 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		F11D164F25BA0C4C0046C5A9 /* View */ = {
+		F11D164F25BA0C4C0046C5A9 /* Favoritos */ = {
 			isa = PBXGroup;
 			children = (
-				F1855C5725BB038D0029CBFA /* MoedaViewCell.swift */,
-				F1A626F425C1D9E0009952F7 /* MoedaViewCellModel.swift */,
-				5FECC54925B9C5BA00F07700 /* ViewController.swift */,
-				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
+				F1A626B825C1958B009952F7 /* FavoritosViewModel.swift */,
 				5F15BF4125BB6251005BAAF7 /* FavoritoViewController.swift */,
 				F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */,
-				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
-				5F15BF2E25BB4E58005BAAF7 /* HomeTableViewCell.swift */,
-				5F15BF3A25BB6235005BAAF7 /* HomeViewController.swift */,
-				5FADF22D25BF2969003DB6AE /* TabBarViewController.swift */,
 			);
-			path = View;
+			path = Favoritos;
 			sourceTree = "<group>";
 		};
 		F11D165625BA0CCB0046C5A9 /* Model */ = {
@@ -273,15 +302,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F11D167025BA0E710046C5A9 /* ViewModel */ = {
+		F11D167025BA0E710046C5A9 /* Detalhes */ = {
 			isa = PBXGroup;
 			children = (
-				F11D167125BA0E810046C5A9 /* MoedaViewModel.swift */,
-				F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */,
 				F1F2A47325C0618F00D55FAF /* DetalhesMoedaViewModel.swift */,
-				F1A626B825C1958B009952F7 /* FavoritosViewModel.swift */,
+				F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */,
 			);
-			path = ViewModel;
+			path = Detalhes;
 			sourceTree = "<group>";
 		};
 		F17337BE25BE0CEC00D007BD /* Resources */ = {
@@ -305,6 +332,7 @@
 				5FECC53F25B9C5BA00F07700 /* Frameworks */,
 				5FECC54025B9C5BA00F07700 /* Resources */,
 				3A31E10F7A97DEF1B7EB7501 /* [CP] Embed Pods Frameworks */,
+				5F49F64025C4322900F72CE5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -411,6 +439,7 @@
 				ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */,
 				F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
+				5F49F64E25C434C000F72CE5 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +537,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5F49F64025C4322900F72CE5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
