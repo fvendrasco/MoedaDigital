@@ -7,6 +7,10 @@ target 'MoedaDigital' do
   pod 'Alamofire', '~> 4.7.0'
   pod 'AlamofireImage', '~> 3.4.0'
   pod 'SwiftLint'
+  
+  pod 'Commons',
+  :git => 'https://github.com/BrenoLuizetto/CommonsMoeda.git',
+  :branch => 'master'
 
 
   # Pods for MoedaDigital

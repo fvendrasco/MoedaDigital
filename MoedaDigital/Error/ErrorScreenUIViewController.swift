@@ -19,13 +19,13 @@ class ErrorScreenUIView: UIViewController {
     
     @IBAction func recarregaDadosButton(_ sender: UIButton) {
         MoedaAPI().recebeMoeda()
-        self.present(ViewController(), animated: true, completion: nil)
+        self.present(HomeViewController(), animated: true, completion: nil)
 
         
     }
    
     func exibeHomeViewController() {
-        self.present(ViewController(), animated: true, completion: nil)
+        self.present(HomeViewController(), animated: true, completion: nil)
     }
 
 }

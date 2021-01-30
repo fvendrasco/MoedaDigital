@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Commons
 
 class HomeViewController: UIViewController {
     
+    //MARK: - IBoutlet
     @IBOutlet weak var tabelaMoedas: UITableView!{
         didSet {
             let nibName = UINib(nibName: "HomeTableViewCell", bundle: nil)
@@ -22,10 +24,10 @@ class HomeViewController: UIViewController {
     //MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
     var listaMoeda: Array<MoedaViewData> = []
+    let commons = CommonsMoeda()
 
     // MARK: - Constructor
     init() {
-        
         super.init(nibName: "HomeViewController", bundle: nil)
     }
     
@@ -34,7 +36,6 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - Life Cycle
-
     override func viewDidLoad() {
         self.title = "Moeda Digital"
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
         self.tabelaMoedas.dataSource = self
         self.tabelaMoedas.delegate = self
         pesquisaMoeda.delegate = self
-        atualizaData()
+        labelDataTelaPrincipal.text = commons.atualizaData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,13 +53,6 @@ class HomeViewController: UIViewController {
     //MARK: - Methods
     func atualizaTabela(){
         tabelaMoedas.reloadData()
-    }
-    
-    func atualizaData(){
-        let data = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/YYYY"
-        self.labelDataTelaPrincipal.text = dateFormatter.string(from: data)
     }
     
     func load(){
@@ -77,11 +71,12 @@ class HomeViewController: UIViewController {
     
 } //end
 
+//MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return viewModel.moedaData.count
+        return listaMoeda.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,6 +93,7 @@ extension HomeViewController: UITableViewDataSource {
    }
 }
 
+//MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -109,13 +105,14 @@ extension HomeViewController: UITableViewDelegate {
     
 }
 
+//MARK: - UISearchBarDelegate
 extension HomeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaMoeda = viewModel.moedaData
         
         if searchText != ""{
-            listaMoeda = listaMoeda.filter({ $0.asset_id.contains(searchText) })
+            listaMoeda = listaMoeda.filter({ $0.name.contains(searchText) })
         }
         atualizaTabela()
     }

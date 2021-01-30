@@ -6,23 +6,12 @@
 //
 
 import UIKit
+import Commons
 
 class FavoritoViewController: UIViewController{
     
-    @IBOutlet weak var labelData: UILabel!
-    
-    
-    init() {
-        
-        super.init(nibName: "FavoritoViewController", bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     //MARK: - IBOutlet
-    
+    @IBOutlet weak var labelData: UILabel!
     @IBOutlet weak var collectionMoeda: UICollectionView! {
         didSet {
             let nibName = UINib(nibName: "FavoritosCollectionViewCell", bundle: nil)
@@ -33,29 +22,33 @@ class FavoritoViewController: UIViewController{
     
     //MARK: - Properts
     var viewModel: FavoritosViewModel = FavoritosViewModel()
+    let commons = CommonsMoeda()
+    
+    //MARK: - Constructor
+    init() {
+        
+        super.init(nibName: "FavoritoViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         self.title = "Favoritos"
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
-        atualizaData()
+        labelData.text = commons.atualizaData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         collectionMoeda.reloadData()
     }
-    
-    func atualizaData(){
-        let data = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/YYYY"
-        print(dateFormatter.string(from: data))
-    labelData.text = dateFormatter.string(from: data)
-    }
 
 } //end
 
+//MARK: - CollectionViewDataSource
 extension FavoritoViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.recuperaFavoritos().count
@@ -72,6 +65,7 @@ extension FavoritoViewController: UICollectionViewDataSource{
     }
 }
 
+//MARK: - CollectionViewDelegate
 extension FavoritoViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -83,6 +77,7 @@ extension FavoritoViewController: UICollectionViewDelegate {
 
 }
 
+//MARK: - CollectionViewDelegateFlowLayout
 extension FavoritoViewController:UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

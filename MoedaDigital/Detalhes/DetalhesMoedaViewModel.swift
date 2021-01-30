@@ -14,6 +14,7 @@ class DetalhesMoedaViewModel  {
     var valorMoeda: MoedaViewData?
     var moedaSalva: Moeda?
     
+    //MARK: - Constructor
     init(valorMoeda: MoedaViewData?, moedaSalva: Moeda?, moedaDAO: MoedaDAO = MoedaDAO()) {
         self.valorMoeda = valorMoeda
         self.moedaSalva = moedaSalva
