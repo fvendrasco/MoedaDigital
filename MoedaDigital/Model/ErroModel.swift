@@ -8,16 +8,9 @@
 import UIKit
 
 class ErroModel: NSObject {
-    
     func exibeErro() -> UIAlertController? {
-        
         let alerta = UIAlertController(title: "Erro ", message: "Há algo errado com a sua requisicao, tente novamente", preferredStyle: .alert)
         alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             return alerta
-        
-    
-
-    
-    
-}
+    }
 }

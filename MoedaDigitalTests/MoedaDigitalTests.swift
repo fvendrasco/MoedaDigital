@@ -29,10 +29,9 @@ class MoedaDigitalTests: XCTestCase {
 //            // Put the code you want to measure the time of here.
 //        }
 //    }
-    
-    func celulaVazia(){
+    func celulaVazia() {
         let tabela = UITableView()
-        let vc = ViewController()
+        let vc = HomeViewController()
         vc.listaMoeda = []
     }
 

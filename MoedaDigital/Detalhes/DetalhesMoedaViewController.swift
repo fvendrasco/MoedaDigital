@@ -8,7 +8,7 @@
 import UIKit
 
 class DetalhesMoedaViewController: UIViewController {
-    //MARK: IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet weak var lastHour: UILabel!
     @IBOutlet weak var lastMonth: UILabel!
@@ -17,23 +17,17 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
-    
-
-    //MARK: - Properts
+    // MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
-    
-    //MARK: - Constructor
+    // MARK: - Constructor
     init(viewModel: DetalhesMoedaViewModel?) {
         self.viewModel = viewModel
-        
         super.init(nibName: "DetalhesMoedaViewController", bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //MARK: - LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configura()
@@ -42,8 +36,8 @@ class DetalhesMoedaViewController: UIViewController {
         moedaFavorita()
     }
 
-    //MARK: - Methods
-    func configura(){
+    // MARK: - Methods
+    func configura() {
         if viewModel?.valorMoeda != nil {
             guard let valor = viewModel?.valorMoeda else {return}
             labelTipo.text =  valor.asset_id
@@ -59,17 +53,15 @@ class DetalhesMoedaViewController: UIViewController {
             lastMonth.text = valor.volumeMonth
             lastDay.text = valor.volumeDay
         }
-        
     }
-    
-    func moedaFavorita(){
+    func moedaFavorita() {
         if viewModel?.recuperaFavorito() == true {
             labelEstrela.text = "⭐"
             buttonFavorito.setTitle("remover", for: .normal)
         }
     }
 
-    //MARK: - IBAction
+    // MARK: - IBAction
     @IBAction func estadoMoeda(_ sender: Any) {
         viewModel?.montaDicionario()
         buttonFavorito.setTitle("operação realizada", for: .normal)

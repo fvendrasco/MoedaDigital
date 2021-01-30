@@ -8,24 +8,15 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-//    init() {
-//
-//        super.init(style: "HomeTableViewCell", reuseIdentifier: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-
+    // MARK: - IBOutlet
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelId: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
     @IBOutlet weak var labelName: UILabel!
-    
-    
+    // MARK: - Properts
     var viewModel: MoedaViewCellModel = MoedaViewCellModel()
-    
-    func configuraCell(_ moeda: MoedaViewData){
+    // MARK: - Methods
+    func configuraCell(_ moeda: MoedaViewData) {
         labelRate.text = moeda.price_usd
         labelId.text = moeda.asset_id
         labelName.text = moeda.name
@@ -35,5 +26,4 @@ class HomeTableViewCell: UITableViewCell {
             labelEstrela.text = ""
         }
     }
-    
 }

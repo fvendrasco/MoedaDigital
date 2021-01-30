@@ -8,14 +8,12 @@
 import Foundation
 
 class FavoritosViewModel {
-    
-    //MARK: - Properts
+    // MARK: - Properts
     private var listaDeValores: Moeda?
     private var moedaFavoritos: Array<Moeda> = []
     var moedaData: Array<MoedaViewData> = []
-    
-    //MARK: - Methods
-    func recuperaFavoritos() -> Array<Moeda>{
+    // MARK: - Methods
+    func recuperaFavoritos() -> Array<Moeda> {
         moedaFavoritos = MoedaDAO().recuperaDadosDaMoeda()
         return moedaFavoritos
     }
