@@ -14,11 +14,9 @@ class TabBarViewController: UITabBarController {
         tabBarMoedas()
         setupAccessibility()
     }
-    
-
+    // MARK: - Methods
     func tabBarMoedas() {        
- 
-        //MARK: - TabBar Moedas
+        // MARK: - TabBar Moedas
         let moedaViewController = UINavigationController(rootViewController: HomeViewController())
         moedaViewController.navigationBar.barStyle = UIBarStyle.black
         moedaViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
@@ -27,10 +25,7 @@ class TabBarViewController: UITabBarController {
             moedaViewController.tabBarItem.image = UIImage(systemName: "dollarsign.circle")
             moedaViewController.tabBarItem.selectedImage = UIImage(systemName: "dollarsign.circle.fill")
         }
-
-    
-        
-        //MARK: - TabBar Favoritos
+        // MARK: - TabBar Favoritos
         let favoritoViewController = UINavigationController(rootViewController: FavoritoViewController())
         favoritoViewController.navigationBar.barStyle = UIBarStyle.black
         favoritoViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
@@ -41,12 +36,10 @@ class TabBarViewController: UITabBarController {
             item.selectedImage = UIImage(systemName: "star.fill")
         }
         favoritoViewController.tabBarItem = item
-            
         viewControllers = [moedaViewController, favoritoViewController]
-        
-        //MARK: - TabBar Botoes re-size
+        // MARK: - TabBar Botoes re-size
         guard let items = tabBar.items else {return }
-        for item in items{
+        for item in items {
             item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
         }
     }
@@ -58,7 +51,7 @@ class TabBarViewController: UITabBarController {
     }
 }
 
-extension TabBarViewController: UITabBarControllerDelegate{
+extension TabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selecionada\(viewController.title!)")
     }

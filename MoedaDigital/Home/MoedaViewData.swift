@@ -1,5 +1,4 @@
-
-protocol MoedaViewDataType{
+protocol MoedaViewDataType {
     var volume_1hrs_usd: String {get}
     var volume_1day_usd: String {get}
     var volume_1mth_usd: String {get}
@@ -9,14 +8,14 @@ protocol MoedaViewDataType{
     var id_icon: String {get}
 }
 import Foundation
+import Commons
 
 public class MoedaViewData {
-    
-    //MARK: - Properts
+    // MARK: - Properts
     private let model: ModeloMoedaElement
-    
-    //MARK: - Constructor
-    init(model: ModeloMoedaElement){
+    let commons = CommonsMoeda()
+    // MARK: - Constructor
+    init(model: ModeloMoedaElement) {
         self.model = model
     }
 }
@@ -24,46 +23,25 @@ public class MoedaViewData {
 extension MoedaViewData: MoedaViewDataType {
     var volume_1hrs_usd: String {
         guard let hour = model.volume1HrsUsd else {return ""}
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let formatterHour = numberFormatter.string(from: NSNumber(value: hour))
-//        let horaString = String(format: "$ %.f%", hora)
-        return formatterHour!
+        return commons.configuraValorMoeda(value: hour)
     }
-    
     var volume_1day_usd: String {
         guard let day = model.volume1DayUsd else {return ""}
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let formatterDay = numberFormatter.string(from: NSNumber(value: day))
-//        let horaString = String(format: "$ %.f%", hora)
-        return formatterDay!
+        return commons.configuraValorMoeda(value: day)
     }
-    
     var volume_1mth_usd: String {
         guard let month = model.volume1HrsUsd else {return ""}
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let formatterMonth = numberFormatter.string(from: NSNumber(value: month))
-//        let horaString = String(format: "$ %.f%", hora)
-        return formatterMonth!
+        return commons.configuraValorMoeda(value: month)
     }
-    
     var asset_id: String {
         return model.assetID
     }
-    
     var name: String {
         return model.name ?? ""
     }
-    
     var price_usd: String {
         guard let price = model.priceUsd else {return "$ 0.0"}
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let formatterPrice = numberFormatter.string(from: NSNumber(value: price))
-//        let priceString = String(format: "$ %.5f%", price)
-        return String("$ \(formatterPrice!)")
+        return commons.configuraValorMoeda(value: price)
     }
     var id_icon: String {
         return model.idIcon ?? ""

@@ -10,13 +10,7 @@ import UIKit
 import AlamofireImage
 
 class MoedaViewCellModel {
-    
-    func recuperaEstrela(_ nome: String) -> Bool{
+    func recuperaEstrela(_ nome: String) -> Bool {
         MoedaDAO().verificaMoeda(nome)
     }
-    
-//    func recuperaIcone(imagem: UIImageView, id: String){
-//        let iconeMoeda = (String)
-//        imagem.af_setImage(withURL: url)
-//    }
 }

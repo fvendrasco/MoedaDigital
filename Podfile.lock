@@ -2,20 +2,37 @@ PODS:
   - Alamofire (4.7.3)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
+  - Commons (0.1.0)
+  - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.0)
   - AlamofireImage (~> 3.4.0)
+  - Commons (from `https://github.com/BrenoLuizetto/CommonsMoeda.git`, branch `master`)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  Commons:
+    :branch: master
+    :git: https://github.com/BrenoLuizetto/CommonsMoeda.git
+
+CHECKOUT OPTIONS:
+  Commons:
+    :commit: 0b70b98cd943101f6e8365e7b9f49b0896a0a130
+    :git: https://github.com/BrenoLuizetto/CommonsMoeda.git
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  Commons: a0c77c12544d1c4d13fa8caa9a68f6b6377ef75b
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 14ea3c1134d1962378d5630c1398ae647d0243ec
+PODFILE CHECKSUM: 7c745146f0fb3e265edaa108eac405a7b8829919
 
 COCOAPODS: 1.10.1
