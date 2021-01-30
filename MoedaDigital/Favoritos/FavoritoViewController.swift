@@ -40,10 +40,15 @@ class FavoritoViewController: UIViewController{
         collectionMoeda.dataSource = self
         collectionMoeda.delegate = self
 <<<<<<< HEAD
+<<<<<<< HEAD
         setupAccessibility()
 =======
         atualizaData()
 >>>>>>> develop
+=======
+        atualizaData()
+      setupAccessibility()
+>>>>>>> 1665dd90c60dd2b05371d51b73b7d8b669b65d07
     }
     
     override func viewWillAppear(_ animated: Bool) {
