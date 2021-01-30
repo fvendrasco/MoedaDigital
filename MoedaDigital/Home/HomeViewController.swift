@@ -79,11 +79,14 @@ class HomeViewController: UIViewController {
         tabelaMoedas.isAccessibilityElement = true
         labelDataTelaPrincipal.isAccessibilityElement = true
         pesquisaMoeda.isAccessibilityElement = true
+
         
         tabelaMoedas.accessibilityLabel = "Esta tabela traz os dados das Moedas, os dados são nome, imagem, sigla e valor"
-        labelDataTelaPrincipal.accessibilityLabel = "Este campo apresentada a data de hoje"
+        labelDataTelaPrincipal.accessibilityLabel = "Neste campo consta a data de hoje"
+        labelDataTelaPrincipal.accessibilityTraits = .staticText
         pesquisaMoeda.accessibilityLabel = "Informe o nome da moeda que deseja buscar"
         
+        self.accessibilityElements = [labelDataTelaPrincipal!, pesquisaMoeda!, tabelaMoedas!]
     }
     
 } //end

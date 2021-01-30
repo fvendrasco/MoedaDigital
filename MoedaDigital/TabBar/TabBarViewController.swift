@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarMoedas()
-        setupAccessibility()
+//        setupAccessibility()
     }
     
 
@@ -48,10 +48,10 @@ class TabBarViewController: UITabBarController {
     }
     
     // MARK: Acessibilidade
-    func setupAccessibility(){
-        tabBarFavoritos.isAccessibilityElement = true
-        tabBarFavoritos.accessibilityLabel = "Nesta barra de abas, você pode acessar o menu das Moedas ou de Favoritos"
-    }
+//    func setupAccessibility(){
+////        tabBarFavoritos.isAccessibilityElement = true
+////        tabBarFavoritos.accessibilityLabel = "Nesta barra de abas, você pode acessar o menu das Moedas ou de Favoritos"
+//    }
 }
 
 extension TabBarViewController: UITabBarControllerDelegate{
