@@ -30,11 +30,8 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-ej-BZn">
-                            <rect key="frame" x="0.0" y="37" width="375" height="564"/>
+                            <rect key="frame" x="0.0" y="37" width="375" height="630"/>
                             <color key="backgroundColor" red="0.1019588485" green="0.097942031920000006" blue="0.1019625589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="564" id="KjF-6z-M2V"/>
-                            </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q0g-kg-VvX">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,11 +42,12 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1028401032" green="0.098229952159999995" blue="0.10349812360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="dzd-ej-BZn" secondAttribute="trailing" id="a68-qg-Cvv"/>
-                        <constraint firstItem="dzd-ej-BZn" firstAttribute="leading" secondItem="pDV-AV-B6z" secondAttribute="leading" id="gwh-yy-QHQ"/>
+                        <constraint firstItem="dzd-ej-BZn" firstAttribute="top" secondItem="V8f-tB-bNC" secondAttribute="bottom" constant="8" id="Bcz-eI-wge"/>
+                        <constraint firstAttribute="bottom" secondItem="dzd-ej-BZn" secondAttribute="bottom" id="PLh-OP-OUX"/>
+                        <constraint firstAttribute="trailing" secondItem="dzd-ej-BZn" secondAttribute="trailing" id="R49-Ug-VQv"/>
                         <constraint firstItem="V8f-tB-bNC" firstAttribute="leading" secondItem="pDV-AV-B6z" secondAttribute="leading" id="hxA-l5-MbG"/>
-                        <constraint firstItem="dzd-ej-BZn" firstAttribute="top" secondItem="V8f-tB-bNC" secondAttribute="bottom" constant="8" symbolic="YES" id="re2-hF-xMA"/>
                         <constraint firstItem="V8f-tB-bNC" firstAttribute="top" secondItem="pDV-AV-B6z" secondAttribute="top" constant="8" id="uxP-9R-5Jn"/>
+                        <constraint firstItem="dzd-ej-BZn" firstAttribute="leading" secondItem="pDV-AV-B6z" secondAttribute="leading" id="x1H-Yy-Zsr"/>
                         <constraint firstAttribute="trailing" secondItem="V8f-tB-bNC" secondAttribute="trailing" id="yg8-J9-iFy"/>
                     </constraints>
                 </view>

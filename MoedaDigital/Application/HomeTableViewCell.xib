@@ -73,6 +73,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageCoin" destination="ra7-So-Ot5" id="awK-wd-xkC"/>
                 <outlet property="labelEstrela" destination="9ML-X1-Vrq" id="RK2-yx-nO5"/>
                 <outlet property="labelId" destination="HVV-vn-Hc5" id="XKE-w4-WG4"/>
                 <outlet property="labelName" destination="vWA-GR-MLf" id="74W-pi-zZ8"/>

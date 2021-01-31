@@ -30,7 +30,8 @@ class DetalhesMoedaViewModel {
                     "price_usd": valor.price_usd,
                     "lastHour": valor.volume_1hrs_usd,
                     "lastDay": valor.volume_1day_usd,
-                    "LastMonth": valor.volume_1mth_usd
+                    "LastMonth": valor.volume_1mth_usd,
+                    "icon": valor.id_icon
                 ]
                 moedaDAO.salvaMoeda(dicionarioDeMoeda: dicionario)
             } else {

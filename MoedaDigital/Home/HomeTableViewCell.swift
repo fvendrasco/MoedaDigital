@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class HomeTableViewCell: UITableViewCell {
     // MARK: - IBOutlet
@@ -13,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var labelId: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
     @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageCoin: UIImageView!
     // MARK: - Properts
     var viewModel: MoedaViewCellModel = MoedaViewCellModel()
     // MARK: - Methods
@@ -24,6 +26,10 @@ class HomeTableViewCell: UITableViewCell {
             labelEstrela.text = "⭐"
         } else {
             labelEstrela.text = ""
+        }
+        let iconUrl = moeda.id_icon.replacingOccurrences(of: "-", with: "")
+        if let url = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(iconUrl).png"){
+           let image = self.imageCoin.af_setImage(withURL: url, placeholderImage: UIImage(named: "bitcoin"))
         }
     }
 }
