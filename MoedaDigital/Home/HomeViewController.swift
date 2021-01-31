@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         self.tabelaMoedas.delegate = self
         pesquisaMoeda.delegate = self
         labelDataTelaPrincipal.text = commons.atualizaData()
+        setupAccessibility()
     }
     override func viewWillAppear(_ animated: Bool) {
         load()
@@ -99,5 +100,20 @@ extension HomeViewController: UISearchBarDelegate {
             listaMoeda = listaMoeda.filter({ $0.name.contains(searchText) })
         }
         atualizaTabela()
+    }
+    
+    // MARK: Accessibility
+    func setupAccessibility(){
+        tabelaMoedas.isAccessibilityElement = true
+        labelDataTelaPrincipal.isAccessibilityElement = true
+        pesquisaMoeda.isAccessibilityElement = true
+
+        
+        tabelaMoedas.accessibilityLabel = "Esta tabela traz os dados das Moedas, os dados são nome, imagem, sigla e valor"
+        labelDataTelaPrincipal.accessibilityLabel = "Neste campo consta a data de hoje"
+        labelDataTelaPrincipal.accessibilityTraits = .staticText
+        pesquisaMoeda.accessibilityLabel = "Informe o nome da moeda que deseja buscar"
+        
+        self.accessibilityElements = [labelDataTelaPrincipal!, pesquisaMoeda!, tabelaMoedas!]
     }
 }
