@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var labelDataTelaPrincipal: UILabel!
     @IBOutlet weak var pesquisaMoeda: UISearchBar!
 
-    // MARK: - Propertssyntactic_sugar
+    // MARK: - Properts
     var viewModel: MoedaViewModel = MoedaViewModel()
     var listaMoeda: Array<MoedaViewData> = []
     let commons = CommonsMoeda()

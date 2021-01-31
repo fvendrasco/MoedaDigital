@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Moeda" representedClassName="Moeda" syncable="YES" codeGenerationType="class">
         <attribute name="assetId" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="price" optional="YES" attributeType="String"/>
         <attribute name="volumeDay" optional="YES" attributeType="String"/>
@@ -9,6 +10,6 @@
         <attribute name="volumeMonth" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Moeda" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Moeda" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>

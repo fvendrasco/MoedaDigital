@@ -52,6 +52,7 @@ class MoedaDAO: NSObject, NSFetchedResultsControllerDelegate {
         moeda?.setValue(dicionarioDeMoeda["lastHour"] as? String, forKey: "volumeHour")
         moeda?.setValue(dicionarioDeMoeda["lastDay"] as? String, forKey: "volumeDay")
         moeda?.setValue(dicionarioDeMoeda["price_usd"] as? String, forKey: "price")
+        moeda?.setValue(dicionarioDeMoeda["icon"], forKey: "icon")
         atualizaContexto()
     }
     func deletaMoeda(moeda:MoedaViewData?, moedaSalva: Moeda?) {
