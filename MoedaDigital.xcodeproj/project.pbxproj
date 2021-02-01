@@ -188,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
+				AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -305,7 +306,6 @@
 			children = (
 				F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */,
 				F1F2A46E25C0551900D55FAF /* MoedaDAO.swift */,
-				AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -562,9 +562,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-
 		};
 		B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
