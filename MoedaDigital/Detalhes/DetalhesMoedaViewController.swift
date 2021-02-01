@@ -17,6 +17,9 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
+    @IBOutlet weak var viewCabecalho: UIView!
+    @IBOutlet weak var viewCorpo: UIView!
+    
     // MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
     // MARK: - Constructor
@@ -70,22 +73,22 @@ class DetalhesMoedaViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-//
-//   func setupAccessibility(){
-//        labelRate.isAccessibilityElement = true
-//        labelTipo.isAccessibilityElement = true
-//        lastMonth.isAccessibilityElement = true
-//        lastHour.isAccessibilityElement = true
-//        buttonFavorito.isAccessibilityElement = true
-////        viewCabecalho.isAccessibilityElement = true
-////        viewCorpoTela.isAccessibilityElement = true
-////        viewCabecalho.accessibilityLabel = "Neste espaço está contido a imagem da moeda, sua sigla e seu valor atual e o botão para adicionar aos favoritos"
-////        viewCorpoTela.accessibilityLabel = "Neste espaço está contido os valores da moeda selecionada na última hora, último mês e último ano"
-//        buttonFavorito.setTitle("Adicionar", for: .normal)
-//        buttonFavorito.accessibilityLabel = "Adicionar ou Remover Favoritos"
-//        buttonFavorito.accessibilityHint = "Adicionar e Retirar a moeda aos Favoritos"
-//
-////        self.accessibilityElements = [viewCabecalho!, viewCorpoTela!, buttonFavorito!]
-//    }
+
+   func setupAccessibility(){
+        labelRate.isAccessibilityElement = true
+        labelTipo.isAccessibilityElement = true
+        lastMonth.isAccessibilityElement = true
+        lastHour.isAccessibilityElement = true
+        buttonFavorito.isAccessibilityElement = true
+        viewCabecalho.isAccessibilityElement = true
+        viewCorpo.isAccessibilityElement = true
+        viewCabecalho.accessibilityLabel = "Neste espaço está contido a imagem da moeda, sua sigla e seu valor atual e o botão para adicionar aos favoritos"
+        viewCorpo.accessibilityLabel = "Neste espaço está contido os valores da moeda selecionada na última hora, último mês e último ano"
+        buttonFavorito.setTitle("Adicionar", for: .normal)
+        buttonFavorito.accessibilityLabel = "Adicionar ou Remover Favoritos"
+        buttonFavorito.accessibilityHint = "Adicionar e Retirar a moeda aos Favoritos"
+
+        self.accessibilityElements = [viewCabecalho!, viewCorpo!, buttonFavorito!]
+    }
 
 }
