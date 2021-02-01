@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ErrorScreenUIView: UIViewController {
+class ErrorScreenViewController: UIViewController {
     
     init() {
-        super.init(nibName: ErrorScreenUIView.description(), bundle: nil)
+        super.init(nibName: ErrorScreenViewController.description(), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
