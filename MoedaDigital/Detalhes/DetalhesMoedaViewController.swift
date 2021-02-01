@@ -17,6 +17,7 @@ class DetalhesMoedaViewController: UIViewController {
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelTipo: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
+    @IBOutlet weak var iconMoeda: UIImageView!
     // MARK: - Properts
     var viewModel: DetalhesMoedaViewModel?
     // MARK: - Constructor
@@ -71,8 +72,7 @@ class DetalhesMoedaViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
-    func setupAccessibility(){
+    func setupAccessibility() {
         labelRate.isAccessibilityElement = true
         labelTipo.isAccessibilityElement = true
         lastDay.isAccessibilityElement = true

@@ -28,8 +28,8 @@ class HomeTableViewCell: UITableViewCell {
             labelEstrela.text = ""
         }
         let iconUrl = moeda.id_icon.replacingOccurrences(of: "-", with: "")
-        if let url = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(iconUrl).png"){
-           let image = self.imageCoin.af_setImage(withURL: url, placeholderImage: UIImage(named: "bitcoin"))
+        if let url = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_64/\(iconUrl).png"){
+          self.imageCoin.af_setImage(withURL: url, placeholderImage: UIImage(named: "bitcoin"))
         }
     }
 }

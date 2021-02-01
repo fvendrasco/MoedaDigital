@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetalhesMoedaViewController" customModule="MoedaDigital" customModuleProvider="target">
             <connections>
                 <outlet property="buttonFavorito" destination="wx1-QZ-R9T" id="qGN-aJ-3eH"/>
+                <outlet property="iconMoeda" destination="s1d-pM-Fzh" id="HdX-vy-rEc"/>
                 <outlet property="labelEstrela" destination="2qd-Z4-zuK" id="NxT-WU-2xT"/>
                 <outlet property="labelRate" destination="uK7-OT-iqd" id="Zwf-Qt-63H"/>
                 <outlet property="labelTipo" destination="Vmo-WZ-8nH" id="PbQ-YL-BPg"/>
@@ -118,10 +119,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="último Dia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGC-R7-SPK">
                             <rect key="frame" x="16" y="111" width="76" height="21"/>
-
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>

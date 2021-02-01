@@ -52,5 +52,4 @@ class DetalhesMoedaViewModel {
         }
         return moedaExiste
     }
-
 }
