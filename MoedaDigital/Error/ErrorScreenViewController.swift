@@ -7,21 +7,20 @@
 
 import UIKit
 
-class ErrorScreenUIView: UIViewController {
-    
+class ErrorScreenViewController: UIViewController {
     init() {
-        super.init(nibName: ErrorScreenUIView.description(), bundle: nil)
+        super.init(nibName: "ErrorScreenViewController", bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     @IBAction func recarregaDadosButton(_ sender: UIButton) {
         MoedaAPI().recebeMoeda()
-        self.present(HomeViewController(), animated: true, completion: nil)
+        exibeHomeViewController()
     }
     func exibeHomeViewController() {
         self.present(HomeViewController(), animated: true, completion: nil)
     }
 
 }
+

@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Recarregar dados"; ObjectID = "0xQ-SQ-3p1"; */
+"0xQ-SQ-3p1.normalTitle" = "Recarregar dados";
+
+/* Class = "UILabel"; text = "Deseja tentar novamente?"; ObjectID = "diU-YO-HjI"; */
+"diU-YO-HjI.text" = "Deseja tentar novamente?";
+
+/* Class = "UILabel"; text = "Algo errado aconteceu..."; ObjectID = "fNu-ao-ti0"; */
+"fNu-ao-ti0.text" = "Algo errado aconteceu...";
+
+/* Class = "UILabel"; text = "Clique no botão abaixo"; ObjectID = "lgg-2V-YF9"; */
+"lgg-2V-YF9.text" = "Clique no botão abaixo";

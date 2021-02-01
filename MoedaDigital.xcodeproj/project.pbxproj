@@ -25,8 +25,7 @@
 		5FECC56B25B9C5BE00F07700 /* MoedaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FECC56A25B9C5BE00F07700 /* MoedaDigitalUITests.swift */; };
 		81C656DA5EB010C8C07E0525 /* Pods_MoedaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A47FD1D9515A7FB48FDD3 /* Pods_MoedaDigital.framework */; };
 		AB51B9EB25C1AE2A00374E8A /* ErroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */; };
-		ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */; };
-		ABAAE73325BF57C00093AE21 /* ErrorScreenUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */; };
+		ABAAE73325BF57C00093AE21 /* ErrorScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAE73225BF57C00093AE21 /* ErrorScreenViewController.swift */; };
 		E9FE85507AC614791D950C2E /* Pods_MoedaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */; };
 		F11D164725BA0C1B0046C5A9 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D164625BA0C1B0046C5A9 /* MoedaAPI.swift */; };
 		F11D165825BA0CD60046C5A9 /* ModeloMoedaElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */; };
@@ -34,6 +33,7 @@
 		F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */; };
 		F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */; };
 		F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */; };
+		F1A2821C25C837D3008FA516 /* ErrorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A2820C25C83551008FA516 /* ErrorScreen.xib */; };
 		F1A626B925C1958B009952F7 /* FavoritosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A626B825C1958B009952F7 /* FavoritosViewModel.swift */; };
 		F1A626CD25C19EC9009952F7 /* FavoritosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */; };
 		F1A626F525C1D9E0009952F7 /* MoedaViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A626F425C1D9E0009952F7 /* MoedaViewCellModel.swift */; };
@@ -102,8 +102,7 @@
 		8BA5FFD920C19CE2556F9A68 /* Pods-MoedaDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.debug.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AADB813930ABE16AFA5E877D /* Pods_MoedaDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroModel.swift; sourceTree = "<group>"; };
-		ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorScreen.xib; sourceTree = "<group>"; };
-		ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenUIViewController.swift; sourceTree = "<group>"; };
+		ABAAE73225BF57C00093AE21 /* ErrorScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenViewController.swift; sourceTree = "<group>"; };
 		AEA41529266FFD4D7322958B /* Pods-MoedaDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigital.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigital/Pods-MoedaDigital.release.xcconfig"; sourceTree = "<group>"; };
 		B4984306F06C1A40EFE6E849 /* Pods_MoedaDigital_MoedaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoedaDigital_MoedaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB912E49BD6426281B5AF01D /* Pods-MoedaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoedaDigitalTests.release.xcconfig"; path = "Target Support Files/Pods-MoedaDigitalTests/Pods-MoedaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		F1855C5225BAFAB60029CBFA /* MoedaViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewData.swift; sourceTree = "<group>"; };
 		F1855CC725BB52C20029CBFA /* DetalhesMoedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedaViewController.swift; sourceTree = "<group>"; };
 		F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalhesMoedaViewController.xib; sourceTree = "<group>"; };
+		F1A2820B25C83551008FA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ErrorScreen.xib; sourceTree = "<group>"; };
 		F1A626B825C1958B009952F7 /* FavoritosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewModel.swift; sourceTree = "<group>"; };
 		F1A626CC25C19EC9009952F7 /* FavoritosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1A626F425C1D9E0009952F7 /* MoedaViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewCellModel.swift; sourceTree = "<group>"; };
@@ -187,7 +187,8 @@
 		5F49F64B25C433D200F72CE5 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				ABAAE73225BF57C00093AE21 /* ErrorScreenUIViewController.swift */,
+				ABAAE73225BF57C00093AE21 /* ErrorScreenViewController.swift */,
+				AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -285,7 +286,7 @@
 				F1855CC825BB52C20029CBFA /* DetalhesMoedaViewController.xib */,
 				5FECC55325B9C5BE00F07700 /* LaunchScreen.storyboard */,
 				5FECC54E25B9C5BA00F07700 /* MoedaDigital.xcdatamodeld */,
-				ABAAE71F25BF42230093AE21 /* ErrorScreen.xib */,
+				F1A2820C25C83551008FA516 /* ErrorScreen.xib */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -305,7 +306,6 @@
 			children = (
 				F11D165725BA0CD60046C5A9 /* ModeloMoedaElement.swift */,
 				F1F2A46E25C0551900D55FAF /* MoedaDAO.swift */,
-				AB51B9EA25C1AE2A00374E8A /* ErroModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,8 +444,8 @@
 				5F15BF3125BB4E58005BAAF7 /* HomeTableViewCell.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
 				5F15BF3D25BB6235005BAAF7 /* HomeViewController.xib in Resources */,
-				ABAAE72025BF42230093AE21 /* ErrorScreen.xib in Resources */,
 				5F49F67825C44CA600F72CE5 /* FavoritosCollectionViewCell.xib in Resources */,
+				F1A2821C25C837D3008FA516 /* ErrorScreen.xib in Resources */,
 				F1855CCA25BB52C20029CBFA /* DetalhesMoedaViewController.xib in Resources */,
 				5F49F66D25C444D200F72CE5 /* FavoritoViewController.xib in Resources */,
 				5FECC54D25B9C5BA00F07700 /* Main.storyboard in Resources */,
@@ -562,9 +562,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-
 		};
 		B120601B2905AA3A9C1D8CFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -597,9 +595,9 @@
 			files = (
 				F1F2A47425C0618F00D55FAF /* DetalhesMoedaViewModel.swift in Sources */,
 				F1A626F525C1D9E0009952F7 /* MoedaViewCellModel.swift in Sources */,
-				ABAAE73325BF57C00093AE21 /* ErrorScreenUIViewController.swift in Sources */,
+				ABAAE73325BF57C00093AE21 /* ErrorScreenViewController.swift in Sources */,
 				AB51B9EB25C1AE2A00374E8A /* ErroModel.swift in Sources */,
-				ABAAE73325BF57C00093AE21 /* ErrorScreenUIViewController.swift in Sources */,
+				ABAAE73325BF57C00093AE21 /* ErrorScreenViewController.swift in Sources */,
 				F1855C5325BAFAB60029CBFA /* MoedaViewData.swift in Sources */,
 				F1A626B925C1958B009952F7 /* FavoritosViewModel.swift in Sources */,
 				F1855CC925BB52C20029CBFA /* DetalhesMoedaViewController.swift in Sources */,
@@ -664,6 +662,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		F1A2820C25C83551008FA516 /* ErrorScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1A2820B25C83551008FA516 /* Base */,
+			);
+			name = ErrorScreen.xib;
+			path = MoedaDigital/Application;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 

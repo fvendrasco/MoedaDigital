@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         self.tabelaMoedas.delegate = self
         pesquisaMoeda.delegate = self
         labelDataTelaPrincipal.text = commons.atualizaData()
+        listaMoeda = viewModel.moedaData
     }
     override func viewWillAppear(_ animated: Bool) {
         load()
@@ -51,16 +52,16 @@ class HomeViewController: UIViewController {
         tabelaMoedas.reloadData()
     }
     func load() {
-        if viewModel.moedaData.count != 0 {
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
-                self.listaMoeda = self.viewModel.moedaData
-                self.atualizaTabela()
-            }
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
-                self.load()
-            }
-        }
+//        if viewModel.moedaData.count != 0 {
+//            DispatchQueue.main.asyncAfter(deadline: .now()) {
+//                self.listaMoeda = self.viewModel.moedaData
+//                self.atualizaTabela()
+//            }
+//        } else {
+//            DispatchQueue.main.asyncAfter(deadline: .now()) {
+//                self.load()
+//            }
+//        }
     }
 } // end
 
